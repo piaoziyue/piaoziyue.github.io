@@ -8,7 +8,7 @@ export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
     date: "April 2025",
-    title: "We launched the Montreal HCI Help Desk! Don't hesitate to send request if you need help in HCI as an early stage researcher!",
+    title: "We launched the Montreal HCI Help Desk! Don't hesitate to send requests if you need help in HCI as an early stage researcher!",
     link: "https://hci-mtl.github.io/",
   },
   {

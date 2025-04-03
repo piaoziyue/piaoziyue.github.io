@@ -5,14 +5,14 @@ export function NewsEntry({ news }: { news: News }) {
   return (
     <div className="flex flex-row gap-4">
       <div className="flex flex-col flex-1">
-        <p className="text-xs text-zinc-500 md-1">{news.date}</p>
+        <p className="text-xs text-zinc-500 mb-1">{news.date}</p>
         <h4 className="font-serif text-md">
           {news.link ? (
             <a
               href={news.link}
               target="_blank"
               rel="noopener noreferrer"
-              className="group inline-flex items-center gap-2 hover:text-zinc-600 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-zinc-800 hover:text-zinc-600 transition-colors duration-300"
             >
               {news.title}
               <ArrowUpRight
