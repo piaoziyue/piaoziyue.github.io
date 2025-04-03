@@ -7,6 +7,16 @@ export interface News {
 export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
+    date: "April 2025",
+    title: "We launched the Montreal HCI Help Desk! Don't hesitate to send request if you need help in HCI as an early stage researcher!",
+    link: "https://hci-mtl.github.io/",
+  },
+  {
+    date: "March 2025",
+    title: "I will serve as Registration Chair for TEI 2026.",
+    link: "https://tei.acm.org/2026/",
+  },
+  {
     date: "January 2025",
     title: "Our CHI paper was conditionally accepted at CHI 2025!",
     link: "https://chi2025.acm.org/",
