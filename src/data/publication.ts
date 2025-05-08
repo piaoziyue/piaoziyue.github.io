@@ -34,7 +34,7 @@ export const publicationData: Publication[] = [
     conference: "CHI",
     title: "Project TapTap: A Longitudinal Study Exploring Non-Verbal Communication through Vibration Signals Between Teachers and Blind or Low Vision Music Learners",
     authors: "Leon Lu, Chase Crispin, Ziyue Piao, Aino Eze-Anyanwu, Audrey Girouard",
-    paperUrl: "https://dl.acm.org/doi/full/10.1145/3706598.3713298",
+    // paperUrl: "https://dl.acm.org/doi/full/10.1145/3706598.3713298",
     imageUrl: "/assets/img/pub-CHI25.png",
     tldr: "Exploring how wearable haptics could facilitate communication between sighted teachers and BLV students during one-on-one music lessons."
   },
