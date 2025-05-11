@@ -7,8 +7,13 @@ export interface News {
 export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
+    date: "May 2025",
+    title: "Welcome to register to the 7th COBS Student Colloquium we organized.",
+    link: "https://www.ccob-cobs.org/",
+  },
+  {
     date: "April 2025",
-    title: "We launched the Montreal HCI Help Desk! Don't hesitate to send requests if you need help in HCI as an early stage researcher!",
+    title: "We launched the Montreal HCI Help Desk!",
     link: "https://hci-mtl.github.io/",
   },
   {
@@ -16,11 +21,11 @@ export const newsData: News[] = [
     title: "I will serve as Registration Chair for TEI 2026.",
     link: "https://tei.acm.org/2026/",
   },
-  {
-    date: "January 2025",
-    title: "Our CHI paper was conditionally accepted at CHI 2025!",
-    link: "https://chi2025.acm.org/",
-  }
+  // {
+  //   date: "January 2025",
+  //   title: "Our CHI paper was conditionally accepted at CHI 2025!",
+  //   link: "https://chi2025.acm.org/",
+  // }
   // {
   //   date: "December 2024",
   //   title: "A Graduate Student Consortium paper was accepted at TEI 2025!",
