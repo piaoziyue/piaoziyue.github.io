@@ -8,7 +8,7 @@ export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
     date: "May 2025",
-    title: "Welcome to register to the 7th COBS Student Colloquium we organized.",
+    title: "Welcome to register to the 7th COBS Student Colloquium we are organizing.",
     link: "https://www.ccob-cobs.org/",
   },
   {
