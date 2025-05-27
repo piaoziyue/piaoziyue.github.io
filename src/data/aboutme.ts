@@ -28,7 +28,7 @@ export const aboutMe: AboutMe = {
     "/assets/img/img_me.jpg",
   googleScholarUrl: "https://scholar.google.com/citations?user=5ZCY2U8AAAAJ&hl",
   githubUsername: "piaoziyue",
-  linkedinUsername: "ziyue-piao-312924216",
+  linkedinUsername: "ziyue-monica-piao-312924216",
   twitterUsername: "ParkZiyue",
   // blogUrl: "https://",
   cvUrl: "/assets/Ziyue Piao_CV.pdf",
