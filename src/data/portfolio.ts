@@ -8,10 +8,10 @@ export interface Portfolio {
 export const portfolioData: Portfolio[] = [
   // Example entry
   {
-    title: "Se tu m'ami by A. Parisotti",
+    title: "Singing Rehearsal Recordings",
     description: "",
     //   "A framework for discovering causal relationships in high-dimensional time series data using state-of-the-art machine learning techniques.",
-    projectUrl: "https://www.youtube.com/watch?v=oCdlQyX_nBY",
+    projectUrl: "https://youtu.be/FhGFUh8TIeQ?si=Z4wfFsNRiujNLKW-",
     imageUrl:
       "/assets/img/portfolio/performance/per_sing_setu.png",
   },
