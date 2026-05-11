@@ -5,11 +5,11 @@
   "homepage": "https://piaoziyue.github.io",
   "scripts": {
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint .",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build"
+    "deploy": "gh-pages -d out",
+    "start": "next start",
+    "build": "next build"
   },
   "dependencies": {
     "express": "^4.21.2",

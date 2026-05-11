@@ -6,34 +6,24 @@ export interface News {
 
 export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
-  {
-    date: "May 2025",
-    title: "Welcome to register to the 7th COBS Student Colloquium we are organizing.",
-    link: "https://www.ccob-cobs.org/",
+ {
+    date: "May 2026",
+    title: "A published journal article will be presented as a poster at EuroHaptics 2026.",
+    link: "https://www.mdpi.com/2076-0825/13/11/462",
   },
   {
-    date: "April 2025",
-    title: "We launched the Montreal HCI Help Desk!",
-    link: "https://hci-mtl.github.io/",
+    date: "May 2026",
+    title: "We are organizing the 2026 CIRMMT Student Symposium on May 21 2026.",
+    link: "https://www.cirmmt.org/en/events/general-assembly/21-may-2026-ss-ga",
   },
   {
-    date: "March 2025",
-    title: "I will serve as Registration Chair for TEI 2026.",
-    link: "https://tei.acm.org/2026/",
+    date: "April 2026",
+    title: "A full paper and a workshop paper have been accepted at NIME 2026!",
+    link: "https://nime2026.org/",
   },
-  // {
-  //   date: "January 2025",
-  //   title: "Our CHI paper was conditionally accepted at CHI 2025!",
-  //   link: "https://chi2025.acm.org/",
-  // }
-  // {
-  //   date: "December 2024",
-  //   title: "A Graduate Student Consortium paper was accepted at TEI 2025!",
-  //   link: "https://tei.acm.org/2025/",
-  // },
-  // {
-  //   date: "November 2024",
-  //   title: "I got IEEE TCH Innovation in Haptics Research Grant!",
-  //   link: "https://www.ieee-ras.org/haptics/activities/research-proposals",
-  // }
+  {
+    date: "March 2026",
+    title: "A workshop paper has been accepted at the Body Transformation Experiences workshop at CHI 2026.",
+    link: "https://imbodylab.com/chi26-body-transformation-workshop/",
+  },
 ];
