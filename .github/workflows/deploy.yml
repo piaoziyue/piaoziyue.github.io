@@ -18,7 +18,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 20 # Next.js 15 requires Node.js 18.18+ or 20+
+          node-version: 22 # Next.js 15 requires Node.js 18.18+
           cache: npm
 
       # Step 3: Install dependencies
