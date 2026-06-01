@@ -102,7 +102,7 @@ export const rmiWorkshop: WorkshopPageData = {
   invitedSpeakers: [
     {
       name: "Dr. Bavo Van Kerrebroeck",
-      affiliation: "Grent University",
+      affiliation: "Ghent University",
       title: "Presentation Title: TBD",
       abstract: "Abstract: TBD",
     },
