@@ -1,6 +1,8 @@
 export interface WorkshopSpeaker {
   name: string;
   affiliation: string;
+  url?: string;
+  imageUrl?: string;
   role?: string;
   title?: string;
   abstract?: string;
@@ -38,9 +40,9 @@ export interface WorkshopPageData {
 
 export const rmiWorkshop: WorkshopPageData = {
   title: "Respiratory Musical Interfaces (RMIs) in NIME",
-  date: "June 23rd, 2026",
-  location: "TBD",
-  bannerImageUrl: "/assets/img/NIME26_RMIs_teaser.png",
+  date: "2:00 - 6:00 PM, June 23rd, 2026",
+  location: "London, UK and online",
+  bannerImageUrl: "/assets/workshop_img/NIME26_RMIs_teaser.png",
   overview: [
     "Breathing is a fundamental physiological process that occupies a unique space in human-computer interaction, sitting at the intersection of autonomic reflex and conscious control. In the context of New Interfaces for Musical Expression (NIME), Respiratory Musical Interfaces (RMIs) have emerged as a powerful modality for high-fidelity, embodied musical control.",
     "This workshop aims to cultivate a dedicated research community to explore the technical, aesthetic, and physiological dimensions of RMIs. The session transitions from foundational respiratory biomechanics and real-time signal processing to implementation insights from leading practitioners across academia and industry.",
@@ -105,8 +107,8 @@ export const rmiWorkshop: WorkshopPageData = {
       abstract: "Abstract: TBD",
     },
     {
-      name: "Dr. Kanyu Chen",
-      affiliation: "University of Tokyo",
+      name: "Dr. Macro Donnarumma",
+      affiliation: "Independent Artist and Researcher",
       title: "Presentation Title: TBD",
       abstract: "Abstract: TBD",
     },
@@ -118,27 +120,15 @@ export const rmiWorkshop: WorkshopPageData = {
     },
   ],
   discussionThemes: [
-    "The Autonomy Paradox: Conscious Intent and Non-conscious Reaction. How can mapping strategies distinguish between deliberate musical phrasing and the body’s organic physiological demands, without imposing a cognitive tax on performance?",
-    "Beyond the Discrete: From Triggering to Instrumental Control. What technical advances are required for future wearables to capture fluid nuances in volume, rate, and pressure and support truly instrumental breath control?",
-    "The Invisible Burden: Scientific Rigor and Artistic Freedom. How do we balance the precision of medical-grade sensing with the psychological, physical, and aesthetic freedom required for high-stakes musical performance?",
-    "Agency and the AI Gap. As RMIs integrate with AI and cloud-based bio-sensing, what ethical questions emerge when internal physiological states become persistent digital assets, and does AI-mediated interaction bridge or widen the embodied gap?",
+    "Theme 1: Decoding the Biomechanical Symphony. Modeling Music-Breathing Coupling. From a research perspective, how can we move beyond basic correlation to build robust computational models of the complex, bi-directional coupling between respiratory biomechanics and musical structures? What physiological parameters matter most when analyzing singer/instrumentalist behaviors, and how can these insights inform generative systems?",
+    "Theme 2: Engineering the Second Skin. Next-Generation Wearable Design for RMIs. What technical and material breakthroughs are required for future wearables to move past rigid 'medical-grade' constraints into fluid, instrumental control? How do we design soft, textile-integrated sensors that capture nuanced multi-modal data (volume, rate, and pressure) while ensuring long-term physical comfort and reliability on stage?",
+    "Theme 3: The Artistry of Co-Regulation. Integrating Breath as an Expressive Medium. From an artist's perspective, how can breath be woven into the fabric of future live performances? How do performers visually and sonically stage the 'invisible' act of respiration, and how can mapping strategies balance a performer's deliberate musical phrasing with the body's organic, non-conscious metabolic survival demands?",
+    "Theme 4: The Adaptive Bio-Aesthetic. AI, Individual Differences, and Custom Body Models. Respiratory patterns are deeply unique—varying by training, anatomy, and real-time performance anxiety. In the context of NIME, how can we use AI not as static processors, but as adaptive co-performers that learn an individual's unique physiological signature? How can AI bridge the gap between custom wearable designs and fluid performance mapping, transforming individual physiological constraints into personalized creative affordances?",
   ],
   panelSpeakers: [
     {
-      name: "Prof. Isabelle Cossette",
-      affiliation: "McGill University",
-      bio: "Bio: TBD",
-      status: "confirmed",
-    },
-    {
-      name: "Prof. Atau Tanaka",
-      affiliation: "Goldsmiths, University of London",
-      bio: "Bio: TBD",
-      status: "confirmed",
-    },
-    {
-      name: "Dr. Bavo Van Kerrebroeck",
-      affiliation: "Ghent University",
+      name: "Dr. Xiao Xiao",
+      affiliation: "Institute for Future Technologies",
       bio: "Bio: TBD",
       status: "confirmed",
     },
@@ -148,17 +138,32 @@ export const rmiWorkshop: WorkshopPageData = {
       bio: "Bio: TBD",
       status: "pending",
     },
+    {
+      name: "Dr. Bavo Van Kerrebroeck",
+      affiliation: "Ghent University",
+      bio: "Bio: TBD",
+      status: "confirmed",
+    },
+        {
+      name: "Prof. Isabelle Cossette",
+      affiliation: "McGill University",
+      bio: "Bio: TBD",
+      status: "confirmed",
+    }
   ],
   organisers: [
     {
       name: "Ziyue (Monica) Piao",
       affiliation: "McGill University",
-      bio: "Ziyue (Monica) Piao is a Ph.D. candidate in Music Technology at McGill University’s Schulich School of Music, supervised by Prof. Marcelo M. Wanderley and Prof. Isabelle Cossette. Her research sits at the intersection of wearable design and embodied interaction, with a specialized interest in how wearable systems can capture respiratory physiology and be applied to embodied musical practices. She is currently collaborating with Yamaha on sensing wearables for capturing and analyzing breathing patterns during piano performance. Her work has been recognized with the FRQSC Doctoral Scholarship and has been published in venues including ACM CHI, NIME, and TEI. She is also an active contributor to communities such as the IEEE Technical Committee on Haptics, CIRMMT, NIME, ISMIR, and TEI.",
+      url: "https://piaoziyue.github.io",
+      imageUrl: "/assets/workshop_img/Ziyue Piao.jpg",
+      bio: "Ziyue is a Ph.D. candidate in Music Technology at McGill University's Schulich School of Music, supervised by Prof. Marcelo M. Wanderley and Prof. Isabelle Cossette. Her research sits at the intersection of wearable design and embodied interaction, with a specialized interest in how wearable systems can capture respiratory physiology and be applied to embodied musical practices. She is currently collaborating with Yamaha on desining sensing wearables for capturing and analyzing breathing patterns during music performances. ",
     },
     {
-      name: "Kanyu (Cady) Chen",
-      affiliation: "Keio University, Tokyo, Japan",
-      bio: "Kanyu (Cady) Chen is a Ph.D. researcher in Wearable Computing at the Graduate School of Media Design, Keio University, supervised by Prof. Kai Kunze and Prof. Kato Akira. Her research focuses on applying physiological sensing technologies to embodied skill acquisition. She investigates how multimodal sensing technologies, including electromyography, ultrasonography, respiration sensing, and audio signal analysis, can support vocal training and music cognition. Her work aims to make internal physiological processes perceptible and actionable, bridging somatic awareness and expressive musical performance. Her research has appeared in venues such as ACM CHI, UbiComp, SIGGRAPH Asia, and IEEE ISMAR, and she actively serves the community as a program committee member for conferences including CHI and UbiComp.",
+      name: "Dr. Kanyu (Cady) Chen",
+      affiliation: "University of Tokyo",
+      imageUrl: "/assets/workshop_img/Kanyu Chen.jpeg",
+      bio: "Kanyu is a Postdoctoral Researcher at the University of Tokyo. She earned her Ph.D. from the Graduate School of Media Design at Keio University under the supervision of Prof. Kai Kunze and Prof. Akira Kato. Her research focuses on applying physiological sensing technologies to embodied skill acquisition. Specifically, she investigates how multimodal sensing technologies—including electromyography (EMG), ultrasonography, respiratory sensing, and audio signal analysis—can support vocal training and music cognition. Her work aims to make internal physiological processes perceptible and actionable, effectively bridging somatic awareness with expressive musical performance.",
     },
   ],
   references: [
@@ -240,12 +245,10 @@ export interface Workshop {
 
 export const workshopData: Workshop[] = [
   {
-    title: "CHI26 Body Transformation Workshop (example)",
-    date: "TBD — 2026",
-    location: "Online / Taipei",
-    description:
-      "A hands-on workshop exploring body transformation techniques, combining lectures, demos, and practical exercises. Based on the structure of examples like imbodylab's workshop pages.",
-    signupUrl: "https://example.com/register",
+    title: "NIME 26 RMIs Workshop",
+    date: "2:00 - 6:00 PM, June 23rd, 2026",
+    location: "London, UK and online",
+    signupUrl: "https://forms.gle/YDpLSmA8wKWPfLXm6",
     imageUrl: "/assets/img/portfolio/design/placeholder-workshop.jpg",
   },
 ];

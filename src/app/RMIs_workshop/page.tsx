@@ -64,6 +64,37 @@ export default function RMIsWorkshopPage() {
             </div>
           </section>
 
+          {/* Registration block */}
+          <section className="relative overflow-hidden rounded-3xl bg-zinc-900 px-8 py-10 text-white shadow-lg">
+            <div className="absolute inset-0 opacity-10"
+              style={{ backgroundImage: "radial-gradient(circle at 70% 50%, #a78bfa 0%, transparent 60%), radial-gradient(circle at 20% 80%, #6ee7b7 0%, transparent 50%)" }}
+            />
+            <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
+              <div className="space-y-3">
+                <p className="text-xs uppercase tracking-[0.25em] text-zinc-400">Registration</p>
+                <h2 className="font-serif text-3xl leading-snug">Join Us — In Person or Online</h2>
+                <div className="flex flex-wrap gap-4 text-sm text-zinc-300">
+                  <span className="flex items-center gap-2">
+                    <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" />
+                    Hybrid participation available
+                  </span>
+                  <span className="flex items-center gap-2">
+                    <span className="inline-block h-2 w-2 rounded-full bg-amber-400" />
+                    Registration closes <strong className="text-white">June 20, 2026</strong>
+                  </span>
+                </div>
+              </div>
+              <a
+                href="https://forms.gle/YDpLSmA8wKWPfLXm6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-zinc-900 shadow transition hover:bg-zinc-100"
+              >
+                Register Now →
+              </a>
+            </div>
+          </section>
+
           <section className="space-y-5">
             <h2 className="font-serif text-2xl tracking-wide">Overview</h2>
             <div className="space-y-4 text-base leading-8 text-zinc-700">
@@ -117,25 +148,30 @@ export default function RMIsWorkshopPage() {
                       <h4 className="font-serif text-lg text-zinc-900">
                         Speakers
                       </h4>
-                      <div className="grid gap-5 md:grid-cols-2">
+                      <div className="space-y-5">
                         {rmiWorkshop.invitedSpeakers.map((speaker: WorkshopSpeaker) => (
                           <article
                             key={speaker.name}
-                            className="rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
+                            className="flex gap-5 rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
                           >
-                            <div className="mb-3 flex items-start justify-between gap-3">
-                              <div>
-                                <h5 className="font-serif text-xl text-zinc-900">
-                                  {speaker.name}
-                                </h5>
-                                <p className="text-sm text-zinc-500">
-                                  {speaker.affiliation}
-                                </p>
+                            {speaker.url ? (
+                              <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200 block" />
+                            ) : (
+                              <div className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200" />
+                            )}
+                            <div className="min-w-0 flex-1">
+                              <h5 className="font-serif text-xl text-zinc-900">
+                                {speaker.url ? (
+                                  <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{speaker.name}</a>
+                                ) : speaker.name}
+                              </h5>
+                              <p className="mb-3 text-sm text-zinc-500">
+                                {speaker.affiliation}
+                              </p>
+                              <div className="space-y-2 text-sm leading-7 text-zinc-700">
+                                {speaker.title && <p>{speaker.title}</p>}
+                                {speaker.abstract && <p>{speaker.abstract}</p>}
                               </div>
-                            </div>
-                            <div className="space-y-2 text-sm leading-7 text-zinc-700">
-                              {speaker.title && <p>{speaker.title}</p>}
-                              {speaker.abstract && <p>{speaker.abstract}</p>}
                             </div>
                           </article>
                         ))}
@@ -149,27 +185,32 @@ export default function RMIsWorkshopPage() {
                         <h4 className="font-serif text-lg text-zinc-900">
                           Panel Speakers
                         </h4>
-                        <div className="grid gap-5 md:grid-cols-2">
+                        <div className="space-y-5">
                           {rmiWorkshop.panelSpeakers.map((speaker: WorkshopSpeaker) => (
                             <article
                               key={speaker.name}
-                              className="rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
+                              className="flex gap-5 rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
                             >
-                              <div className="mb-3 flex items-start justify-between gap-3">
-                                <div>
-                                  <h5 className="font-serif text-xl text-zinc-900">
-                                    {speaker.name}
-                                  </h5>
-                                  <p className="text-sm text-zinc-500">
-                                    {speaker.affiliation}
-                                  </p>
-                                </div>
-                              </div>
-                              {speaker.bio && (
-                                <p className="text-sm leading-7 text-zinc-700">
-                                  {speaker.bio}
-                                </p>
+                              {speaker.url ? (
+                                <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200 block" />
+                              ) : (
+                                <div className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200" />
                               )}
+                              <div className="min-w-0 flex-1">
+                                <h5 className="font-serif text-xl text-zinc-900">
+                                  {speaker.url ? (
+                                    <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="hover:underline">{speaker.name}</a>
+                                  ) : speaker.name}
+                                </h5>
+                                <p className="mb-3 text-sm text-zinc-500">
+                                  {speaker.affiliation}
+                                </p>
+                                {speaker.bio && (
+                                  <p className="text-sm leading-7 text-zinc-700">
+                                    {speaker.bio}
+                                  </p>
+                                )}
+                              </div>
                             </article>
                           ))}
                         </div>
@@ -222,19 +263,40 @@ export default function RMIsWorkshopPage() {
               {rmiWorkshop.organisers.map((organiser: WorkshopSpeaker) => (
                 <article
                   key={organiser.name}
-                  className="rounded-2xl border border-zinc-200 bg-white p-6"
+                  className="flex gap-5 rounded-2xl border border-zinc-200 bg-white p-6"
                 >
-                  <h3 className="font-serif text-xl text-zinc-900">
-                    {organiser.name}
-                  </h3>
-                  <p className="mb-3 text-sm text-zinc-500">
-                    {organiser.affiliation}
-                  </p>
-                  {organiser.bio && (
-                    <p className="text-base leading-8 text-zinc-700">
-                      {organiser.bio}
-                    </p>
+                  {organiser.imageUrl ? (
+                    <div className="h-24 w-24 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200">
+                      <Image
+                        src={organiser.imageUrl}
+                        alt={organiser.name}
+                        width={96}
+                        height={96}
+                        className="object-cover w-full h-full"
+                      />
+                    </div>
+                  ) : organiser.url ? (
+                    <a href={organiser.url} target="_blank" rel="noopener noreferrer" className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200 block" />
+                  ) : (
+                    <div className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200" />
                   )}
+                  <div className="min-w-0 flex-1">
+                    <h3 className="font-serif text-xl text-zinc-900">
+                      {organiser.url ? (
+                        <a href={organiser.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
+                          {organiser.name}
+                        </a>
+                      ) : organiser.name}
+                    </h3>
+                    <p className="mb-3 text-sm text-zinc-500">
+                      {organiser.affiliation}
+                    </p>
+                    {organiser.bio && (
+                      <p className="text-base leading-8 text-zinc-700">
+                        {organiser.bio}
+                      </p>
+                    )}
+                  </div>
                 </article>
               ))}
             </div>
