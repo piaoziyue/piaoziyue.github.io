@@ -152,12 +152,16 @@ export default function RMIsWorkshopPage() {
                         {rmiWorkshop.invitedSpeakers.map((speaker: WorkshopSpeaker) => (
                           <article
                             key={speaker.name}
-                            className="flex gap-5 rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
+                            className="flex items-center gap-6 rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
                           >
-                            {speaker.url ? (
-                              <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200 block" />
+                            {speaker.imageUrl ? (
+                              <div className="h-36 w-36 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200">
+                                <Image src={speaker.imageUrl} alt={speaker.name} width={144} height={144} className="object-cover w-full h-full" />
+                              </div>
+                            ) : speaker.url ? (
+                              <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="h-36 w-36 flex-shrink-0 rounded-lg bg-zinc-200 block" />
                             ) : (
-                              <div className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200" />
+                              <div className="h-36 w-36 flex-shrink-0 rounded-lg bg-zinc-200" />
                             )}
                             <div className="min-w-0 flex-1">
                               <h5 className="font-serif text-xl text-zinc-900">
@@ -189,12 +193,16 @@ export default function RMIsWorkshopPage() {
                           {rmiWorkshop.panelSpeakers.map((speaker: WorkshopSpeaker) => (
                             <article
                               key={speaker.name}
-                              className="flex gap-5 rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
+                              className="flex items-center gap-6 rounded-2xl border border-zinc-200 bg-[#FFFCF8] p-6"
                             >
-                              {speaker.url ? (
-                                <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200 block" />
+                              {speaker.imageUrl ? (
+                                <div className="h-36 w-36 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200">
+                                  <Image src={speaker.imageUrl} alt={speaker.name} width={144} height={144} className="object-cover w-full h-full" />
+                                </div>
+                              ) : speaker.url ? (
+                                <a href={speaker.url} target="_blank" rel="noopener noreferrer" className="h-36 w-36 flex-shrink-0 rounded-lg bg-zinc-200 block" />
                               ) : (
-                                <div className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200" />
+                                <div className="h-36 w-36 flex-shrink-0 rounded-lg bg-zinc-200" />
                               )}
                               <div className="min-w-0 flex-1">
                                 <h5 className="font-serif text-xl text-zinc-900">
@@ -263,22 +271,22 @@ export default function RMIsWorkshopPage() {
               {rmiWorkshop.organisers.map((organiser: WorkshopSpeaker) => (
                 <article
                   key={organiser.name}
-                  className="flex gap-5 rounded-2xl border border-zinc-200 bg-white p-6"
+                  className="flex items-center gap-6 rounded-2xl border border-zinc-200 bg-white p-6"
                 >
                   {organiser.imageUrl ? (
-                    <div className="h-24 w-24 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200">
+                    <div className="h-36 w-36 flex-shrink-0 rounded-lg overflow-hidden bg-zinc-200">
                       <Image
                         src={organiser.imageUrl}
                         alt={organiser.name}
-                        width={96}
-                        height={96}
+                        width={144}
+                        height={144}
                         className="object-cover w-full h-full"
                       />
                     </div>
                   ) : organiser.url ? (
-                    <a href={organiser.url} target="_blank" rel="noopener noreferrer" className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200 block" />
+                    <a href={organiser.url} target="_blank" rel="noopener noreferrer" className="h-36 w-36 flex-shrink-0 rounded-lg bg-zinc-200 block" />
                   ) : (
-                    <div className="h-24 w-24 flex-shrink-0 rounded-lg bg-zinc-200" />
+                    <div className="h-36 w-36 flex-shrink-0 rounded-lg bg-zinc-200" />
                   )}
                   <div className="min-w-0 flex-1">
                     <h3 className="font-serif text-xl text-zinc-900">

@@ -107,7 +107,9 @@ export const rmiWorkshop: WorkshopPageData = {
       abstract: "Abstract: TBD",
     },
     {
-      name: "Dr. Macro Donnarumma",
+      name: "Dr. Marco Donnarumma",
+      url: "https://marcodonnarumma.com",
+      imageUrl: "/assets/workshop_img/marco-donnarumma_by-dario-lagana_2_ed.jpg",
       affiliation: "Independent Artist and Researcher",
       title: "Presentation Title: TBD",
       abstract: "Abstract: TBD",
@@ -128,8 +130,10 @@ export const rmiWorkshop: WorkshopPageData = {
   panelSpeakers: [
     {
       name: "Dr. Xiao Xiao",
+      url: "https://www.linkedin.com/in/xiaosquared/",
+      imageUrl: "/assets/workshop_img/Xiao Xiao.JPG",
       affiliation: "Institute for Future Technologies",
-      bio: "Bio: TBD",
+      bio: "Bio: Xiao Xiao is a Principle Investigator and the director of the Institute for Future Technologies in Paris. Her work explores music as a site for designing embodied, affective, and imaginative interactions with technology. She develops systems involving gesture, AI, haptics, voice, and augmented instruments to study presence, learning, memory, and creative expression.",
       status: "confirmed",
     },
     {
@@ -147,6 +151,7 @@ export const rmiWorkshop: WorkshopPageData = {
         {
       name: "Prof. Isabelle Cossette",
       affiliation: "McGill University",
+      imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
       bio: "Bio: TBD",
       status: "confirmed",
     }
