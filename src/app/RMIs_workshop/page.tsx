@@ -175,12 +175,12 @@ export default function RMIsWorkshopPage() {
                               <div className="space-y-2 text-sm leading-7 text-zinc-700">
                                 {speaker.title && (
                                   <p>
-                                    {(() => { const i = speaker.title!.indexOf(': '); return i !== -1 ? (<><strong>{speaker.title!.slice(0, i + 1)}</strong>{speaker.title!.slice(i + 1)}</>) : speaker.title; })()}
+                                    {(() => { const i = speaker.title!.indexOf(': '); return i !== -1 ? (<><span className="font-semibold">{speaker.title!.slice(0, i + 1)}</span>{speaker.title!.slice(i + 1)}</>) : speaker.title; })()}
                                   </p>
                                 )}
                                 {speaker.abstract && (
                                   <p>
-                                    {(() => { const i = speaker.abstract!.indexOf(': '); return i !== -1 ? (<><strong>{speaker.abstract!.slice(0, i + 1)}</strong>{speaker.abstract!.slice(i + 1)}</>) : speaker.abstract; })()}
+                                    {(() => { const i = speaker.abstract!.indexOf(': '); return i !== -1 ? (<><span className="font-semibold">{speaker.abstract!.slice(0, i + 1)}</span>{speaker.abstract!.slice(i + 1)}</>) : speaker.abstract; })()}
                                   </p>
                                 )}
                               </div>
@@ -223,7 +223,7 @@ export default function RMIsWorkshopPage() {
                                 </p>
                                 {speaker.bio && (
                                   <p className="text-sm leading-7 text-zinc-700">
-                                    {(() => { const i = speaker.bio!.indexOf(': '); return i !== -1 ? (<><strong>{speaker.bio!.slice(0, i + 1)}</strong>{speaker.bio!.slice(i + 1)}</>) : speaker.bio; })()}
+                                    {(() => { const i = speaker.bio!.indexOf(': '); return i !== -1 ? (<><span className="font-semibold">{speaker.bio!.slice(0, i + 1)}</span>{speaker.bio!.slice(i + 1)}</>) : speaker.bio; })()}
                                   </p>
                                 )}
                               </div>
@@ -309,7 +309,7 @@ export default function RMIsWorkshopPage() {
                     </p>
                     {organiser.bio && (
                       <p className="text-base leading-8 text-zinc-700">
-                        {(() => { const i = organiser.bio!.indexOf(': '); return i !== -1 ? (<><strong>{organiser.bio!.slice(0, i + 1)}</strong>{organiser.bio!.slice(i + 1)}</>) : organiser.bio; })()}
+                        {(() => { const i = organiser.bio!.indexOf(': '); return i !== -1 ? (<><span className="font-semibold">{organiser.bio!.slice(0, i + 1)}</span>{organiser.bio!.slice(i + 1)}</>) : organiser.bio; })()}
                       </p>
                     )}
                   </div>
