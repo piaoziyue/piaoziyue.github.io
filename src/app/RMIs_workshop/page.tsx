@@ -64,36 +64,19 @@ export default function RMIsWorkshopPage() {
             </div>
           </section>
 
-          {/* Registration block */}
-          <section className="relative overflow-hidden rounded-3xl bg-zinc-900 px-8 py-10 text-white shadow-lg">
-            <div className="absolute inset-0 opacity-10"
-              style={{ backgroundImage: "radial-gradient(circle at 70% 50%, #a78bfa 0%, transparent 60%), radial-gradient(circle at 20% 80%, #6ee7b7 0%, transparent 50%)" }}
-            />
-            <div className="relative flex flex-col gap-6 md:flex-row md:items-center md:justify-between">
-              <div className="space-y-3">
-                <p className="text-xs uppercase tracking-[0.25em] text-zinc-400">Registration</p>
-                <h2 className="font-serif text-3xl leading-snug">Join Us — In Person or Online</h2>
-                <div className="flex flex-wrap gap-4 text-sm text-zinc-300">
-                  <span className="flex items-center gap-2">
-                    <span className="inline-block h-2 w-2 rounded-full bg-emerald-400" />
-                    Hybrid participation available
-                  </span>
-                  <span className="flex items-center gap-2">
-                    <span className="inline-block h-2 w-2 rounded-full bg-amber-400" />
-                    Registration closes <strong className="text-white">June 20, 2026</strong>
-                  </span>
-                </div>
-              </div>
-              <a
-                href="https://forms.gle/YDpLSmA8wKWPfLXm6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex shrink-0 items-center gap-2 rounded-full bg-white px-7 py-3 text-sm font-medium text-zinc-900 shadow transition hover:bg-zinc-100"
-              >
-                Register Now →
-              </a>
-            </div>
-          </section>
+          {/* Registration note */}
+          <p className="text-base leading-8 text-zinc-700">
+            Please register at the{" "}
+            <a
+              href="https://forms.gle/wqXE9jFXPeV5ZcBk7"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-zinc-900"
+            >
+              NIME workshop registration link
+            </a>
+            .
+          </p>
 
           <section className="space-y-5">
             <h2 className="font-serif text-2xl tracking-wide">Overview</h2>

@@ -151,14 +151,14 @@ export const rmiWorkshop: WorkshopPageData = {
       affiliation: "Ghent University",
       bio: "Bio: Bavo studies how adaptive auditory feedback and sonification can enhance self-regulation and well-being. My work bridges psychophysiology, human-computer interaction, and music cognition to explore how shared auditory and respiratory entrainment fosters relaxation and connectedness. I aim to develop scientifically grounded, engaging, and accessible biofeedback systems that combine technology, cognition, and the arts.",
       status: "confirmed",
-    },
-        {
-      name: "Prof. Isabelle Cossette",
-      affiliation: "McGill University",
-      imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
-      bio: "Bio: TBD",
-      status: "confirmed",
     }
+    //     {
+    //   name: "Prof. Isabelle Cossette",
+    //   affiliation: "McGill University",
+    //   imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
+    //   bio: "Bio: TBD",
+    //   status: "confirmed",
+    // }
   ],
   organisers: [
     {
@@ -257,7 +257,7 @@ export const workshopData: Workshop[] = [
     title: "NIME 26 RMIs Workshop",
     date: "2:00 - 6:00 PM, June 23rd, 2026",
     location: "London, UK and online",
-    signupUrl: "https://forms.gle/YDpLSmA8wKWPfLXm6",
+    signupUrl: "https://forms.gle/wqXE9jFXPeV5ZcBk7",
     imageUrl: "/assets/img/portfolio/design/placeholder-workshop.jpg",
   },
 ];
