@@ -143,7 +143,7 @@ export const rmiWorkshop: WorkshopPageData = {
       name: "Prof. Jamie A. Ward",
       url: "http://www.jamieward.net/index.html",
       affiliation: "Goldsmiths, University of London",
-      bio: "Bio: Jamie's research lies at the intersection of wearable computing, theatre, and psychology, where he uses body-worn sensors to study human behaviour across a diverse range of social situations. Since 2024 he is a Prof. in Computing. He obtained his PhD from the Swiss Federal Institute of Technology (ETH), Zürich, Switzerland in 2006, and a joint degree in Computer Science and Electrical Engineering from the University of Edinburgh in 2000. Prior to joining Goldsmiths, Jamie was a post-doctoral researcher at University College London’s Institute of Cognitive Neuroscience (ICN), and at Lancaster University, where he was a Marie Curie Fellow. He is a visiting researcher at UCL ICN; from 2019-2023 he was a visiting professor at Keio University, Japan; and from 2016-2019 a visiting researcher at the German Centre for AI (DFKI). Between academic positions Jamie worked variously as a technology consultant, an analogue circuit designer, and as an actor in television, film, and theatre.",
+      bio: "Bio: Jamie's research lies at the intersection of wearable computing, theatre, and psychology, where he uses body-worn sensors to study human behaviour across a diverse range of social situations. Between academic positions Jamie worked variously as a technology consultant, an analogue circuit designer, and as an actor in television, film, and theatre.",
       status: "confirmed",
     },
     {
