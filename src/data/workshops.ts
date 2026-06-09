@@ -112,8 +112,8 @@ export const rmiWorkshop: WorkshopPageData = {
       url: "https://marcodonnarumma.com",
       imageUrl: "/assets/workshop_img/marco-donnarumma_by-dario-lagana_2_ed.jpg",
       affiliation: "Independent Artist and Researcher",
-      title: "Presentation Title: TBD",
-      abstract: "Abstract: TBD",
+      title: "Presentation Title: Biophysical Music and Interdisciplinary Performance: Sensing Corporeal Expression",
+      abstract: "Abstract: The application of physiological computing to music and performance has a long history of varied approaches. In this talk, Marco will first offer a concise historical overview and then focus on the past 15 years of biophysical music, a practice that began in the context of NIME and evolved from conventional concert settings into elaborate stage productions, enabling hybrid formats combining performance art, theater and dance with interactive music. ",
     },
     {
       name: "Daniel Chin",
@@ -141,9 +141,10 @@ export const rmiWorkshop: WorkshopPageData = {
     },
     {
       name: "Prof. Jamie A. Ward",
+      url: "http://www.jamieward.net/index.html",
       affiliation: "Goldsmiths, University of London",
-      bio: "Bio: TBD",
-      status: "pending",
+      bio: "Bio: Jamie's research lies at the intersection of wearable computing, theatre, and psychology, where he uses body-worn sensors to study human behaviour across a diverse range of social situations. Since 2024 he is a Prof. in Computing. He obtained his PhD from the Swiss Federal Institute of Technology (ETH), Zürich, Switzerland in 2006, and a joint degree in Computer Science and Electrical Engineering from the University of Edinburgh in 2000. Prior to joining Goldsmiths, Jamie was a post-doctoral researcher at University College London’s Institute of Cognitive Neuroscience (ICN), and at Lancaster University, where he was a Marie Curie Fellow. He is a visiting researcher at UCL ICN; from 2019-2023 he was a visiting professor at Keio University, Japan; and from 2016-2019 a visiting researcher at the German Centre for AI (DFKI). Between academic positions Jamie worked variously as a technology consultant, an analogue circuit designer, and as an actor in television, film, and theatre.",
+      status: "confirmed",
     },
     {
       name: "Dr. Bavo Van Kerrebroeck",
@@ -151,14 +152,15 @@ export const rmiWorkshop: WorkshopPageData = {
       affiliation: "Ghent University",
       bio: "Bio: Bavo studies how adaptive auditory feedback and sonification can enhance self-regulation and well-being. My work bridges psychophysiology, human-computer interaction, and music cognition to explore how shared auditory and respiratory entrainment fosters relaxation and connectedness. I aim to develop scientifically grounded, engaging, and accessible biofeedback systems that combine technology, cognition, and the arts.",
       status: "confirmed",
+    },
+    {
+      name: "Prof. Isabelle Cossette",
+      url: "https://www.mcgill.ca/music/isabelle-cossette",
+      affiliation: "McGill University",
+      imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
+      bio: "Bio: TBD",
+      status: "confirmed",
     }
-    //     {
-    //   name: "Prof. Isabelle Cossette",
-    //   affiliation: "McGill University",
-    //   imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
-    //   bio: "Bio: TBD",
-    //   status: "confirmed",
-    // }
   ],
   organisers: [
     {
@@ -171,6 +173,7 @@ export const rmiWorkshop: WorkshopPageData = {
     {
       name: "Dr. Kanyu (Cady) Chen",
       affiliation: "University of Tokyo",
+      url: "https://www.linkedin.com/in/kanyu-c-507a56124",
       imageUrl: "/assets/workshop_img/Kanyu Chen.jpeg",
       bio: "Kanyu is a Postdoctoral Researcher at the University of Tokyo. She earned her Ph.D. from the Graduate School of Media Design at Keio University under the supervision of Prof. Kai Kunze and Prof. Akira Kato. Her research focuses on applying physiological sensing technologies to embodied skill acquisition. Specifically, she investigates how multimodal sensing technologies—including electromyography (EMG), ultrasonography, respiratory sensing, and audio signal analysis—can support vocal training and music cognition. Her work aims to make internal physiological processes perceptible and actionable, effectively bridging somatic awareness with expressive musical performance.",
     },
