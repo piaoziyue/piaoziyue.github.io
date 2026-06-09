@@ -101,11 +101,12 @@ export const rmiWorkshop: WorkshopPageData = {
   ],
   invitedSpeakers: [
     {
-      name: "Dr. Bavo Van Kerrebroeck",
-      imageUrl: "/assets/workshop_img/Bavo.jpeg",
-      affiliation: "Ghent University",
-      title: "Presentation Title: From Breathing in the Lab to at the Concert: Measuring and Sonifying Auditory-Respiratory Synchrony",
-      abstract: "Abstract: Bavo presents two studies on respiratory–musical interaction: a controlled lab study on spontaneous synchronization to adaptive breathing sounds, and a large-scale concert study using smartphone motion data from audience members. Together, they expose methodological tensions between precision, ecological validity, real-time sensing, and collective biofeedback.",
+      name: "Daniel Chin",
+      url: "https://inspiring-yonath-a67980.netlify.app/",
+      imageUrl: "/assets/workshop_img/Daniel.jpg",
+      affiliation: "NYU Shanghai",
+      title: "Presentation Title: Measuring, Modeling, and Resynthesizing the Six-Hole Recorder Flute: From Custom Sensors to Algorithms",
+      abstract: "Abstract: Daniel presents a working pipeline for digitizing a physical six-hole recorder flute into an electric one. Topics include various sensor chamber designs, measuring how the flute acoustically responds to breath pressure, fitting a model, and a special sound synthesis technique on ESP32.",
     },
     {
       name: "Dr. Marco Donnarumma",
@@ -115,13 +116,12 @@ export const rmiWorkshop: WorkshopPageData = {
       title: "Presentation Title: Biophysical Music and Interdisciplinary Performance: Sensing Corporeal Expression",
       abstract: "Abstract: The application of physiological computing to music and performance has a long history of varied approaches. In this talk, Marco will first offer a concise historical overview and then focus on the past 15 years of biophysical music, a practice that began in the context of NIME and evolved from conventional concert settings into elaborate stage productions, enabling hybrid formats combining performance art, theater and dance with interactive music. ",
     },
-    {
-      name: "Daniel Chin",
-      url: "https://inspiring-yonath-a67980.netlify.app/",
-      imageUrl: "/assets/workshop_img/Daniel.jpg",
-      affiliation: "NYU Shanghai",
-      title: "Presentation Title: Measuring, Modeling, and Resynthesizing the Six-Hole Recorder Flute: From Custom Sensors to Algorithms",
-      abstract: "Abstract: Daniel presents a working pipeline for digitizing a physical six-hole recorder flute into an electric one. Topics include various sensor chamber designs, measuring how the flute acoustically responds to breath pressure, fitting a model, and a special sound synthesis technique on ESP32.",
+        {
+      name: "Dr. Bavo Van Kerrebroeck",
+      imageUrl: "/assets/workshop_img/Bavo.jpeg",
+      affiliation: "Ghent University",
+      title: "Presentation Title: From Breathing in the Lab to at the Concert: Measuring and Sonifying Auditory-Respiratory Synchrony",
+      abstract: "Abstract: Bavo presents two studies on respiratory–musical interaction: a controlled lab study on spontaneous synchronization to adaptive breathing sounds, and a large-scale concert study using smartphone motion data from audience members. Together, they expose methodological tensions between precision, ecological validity, real-time sensing, and collective biofeedback.",
     },
   ],
   discussionThemes: [
