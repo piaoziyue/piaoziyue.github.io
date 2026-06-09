@@ -141,6 +141,7 @@ export const rmiWorkshop: WorkshopPageData = {
     },
     {
       name: "Prof. Jamie A. Ward",
+      imageUrl: "/assets/workshop_img/Jamie.png",
       url: "http://www.jamieward.net/index.html",
       affiliation: "Goldsmiths, University of London",
       bio: "Bio: Jamie's research lies at the intersection of wearable computing, theatre, and psychology, where he uses body-worn sensors to study human behaviour across a diverse range of social situations. Between academic positions Jamie worked variously as a technology consultant, an analogue circuit designer, and as an actor in television, film, and theatre.",
