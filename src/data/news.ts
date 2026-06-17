@@ -13,8 +13,8 @@ export const newsData: News[] = [
   },
   {
     date: "May 2026",
-    title: "A published journal article will be presented as a poster at EuroHaptics 2026.",
-    link: "https://www.mdpi.com/2076-0825/13/11/462",
+    title: "A published journal article will be presented as a poster at EuroHaptics 2026, session D on July 8th.",
+    link: "https://eurohaptics.org/ehc2026/program/previous-published-paper-session/#PPP-D",
   },
   {
     date: "May 2026",
