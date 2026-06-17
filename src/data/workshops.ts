@@ -140,14 +140,6 @@ export const rmiWorkshop: WorkshopPageData = {
       bio: "Bio: Xiao Xiao is a Principle Investigator and the director of the Institute for Future Technologies in Paris. Her work explores music as a site for designing embodied, affective, and imaginative interactions with technology. She develops systems involving gesture, AI, haptics, voice, and augmented instruments to study presence, learning, memory, and creative expression.",
       status: "confirmed",
     },
-    // {
-    //   name: "Prof. Jamie A. Ward",
-    //   imageUrl: "/assets/workshop_img/Jamie.png",
-    //   url: "http://www.jamieward.net/index.html",
-    //   affiliation: "Goldsmiths, University of London",
-    //   bio: "Bio: Jamie's research lies at the intersection of wearable computing, theatre, and psychology, where he uses body-worn sensors to study human behaviour across a diverse range of social situations. Between academic positions Jamie worked variously as a technology consultant, an analogue circuit designer, and as an actor in television, film, and theatre.",
-    //   status: "confirmed",
-    // },
     {
       name: "Dr. Bavo Van Kerrebroeck",
       imageUrl: "/assets/workshop_img/Bavo.jpeg",
