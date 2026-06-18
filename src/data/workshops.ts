@@ -153,7 +153,7 @@ export const rmiWorkshop: WorkshopPageData = {
       url: "https://www.mcgill.ca/music/isabelle-cossette",
       affiliation: "McGill University",
       imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
-      bio: "Bio: Isabelle is an Associate Professor of Music Education at the Schulich School of Music, McGill University. Her research in music performance science focuses on respiratory mechanics, chest wall dynamics, and breathing patterns in instrumentalists and singers. By scientifically examining how performers regulate and coordinate their physiological systems, her work provides foundational insights into the structural embodiment of musical performance.",
+      bio: "Bio: Isabelle is an Associate Professor of Music Education at the Schulich School of Music, McGill University. Her previous research in music performance science focuses on respiratory mechanics, chest wall dynamics, and breathing patterns in instrumentalists and singers. By scientifically examining how performers regulate and coordinate their physiological systems, her work provides foundational insights into the structural embodiment of musical performance.",
       status: "confirmed",
     }
   ],
