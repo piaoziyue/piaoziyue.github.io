@@ -95,7 +95,7 @@ export const rmiWorkshop: WorkshopPageData = {
       duration: "5:00 – 6:00 PM",
       description: [
         "The final hour shifts from existing technologies to defining the next generation of RMIs. This session features a moderated panel discussion and an open forum involving invited researchers, on-site participants, and remote attendees.",
-        "Four senior researchers and professors will join the discussion.",
+        "Senior researchers and professors will join the discussion.",
       ],
     },
   ],
