@@ -145,7 +145,7 @@ export const rmiWorkshop: WorkshopPageData = {
       imageUrl: "/assets/workshop_img/Bavo.jpeg",
       url: "https://scholar.google.com/citations?hl=en&user=6sPOK5gAAAAJ",
       affiliation: "Ghent University",
-      bio: "Bio: Bavo studies how adaptive auditory feedback and sonification can enhance self-regulation and well-being. My work bridges psychophysiology, human-computer interaction, and music cognition to explore how shared auditory and respiratory entrainment fosters relaxation and connectedness. I aim to develop scientifically grounded, engaging, and accessible biofeedback systems that combine technology, cognition, and the arts.",
+      bio: "Bio: Bavo studies how adaptive auditory feedback and sonification can enhance self-regulation and well-being. His work bridges psychophysiology, human-computer interaction, and music cognition to explore how shared auditory and respiratory entrainment fosters relaxation and connectedness. He aims to develop scientifically grounded, engaging, and accessible biofeedback systems that combine technology, cognition, and the arts.",
       status: "confirmed",
     },
     {
