@@ -40,7 +40,7 @@ export interface WorkshopPageData {
 
 export const rmiWorkshop: WorkshopPageData = {
   title: "Respiratory Musical Interfaces (RMIs) in NIME",
-  date: "2:00 - 6:00 PM, June 23rd, 2026",
+  date: "2:00 - 6:00 PM BST, June 23rd, 2026",
   location: "London, UK and online",
   bannerImageUrl: "/assets/workshop_img/NIME26_RMIs_teaser.png",
   overview: [
