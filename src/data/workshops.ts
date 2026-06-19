@@ -106,7 +106,7 @@ export const rmiWorkshop: WorkshopPageData = {
       imageUrl: "/assets/workshop_img/Daniel.jpg",
       affiliation: "NYU Shanghai",
       title: "Presentation Title: Measuring, Modeling, and Resynthesizing the Six-Hole Recorder Flute: From Custom Sensors to Algorithms",
-      abstract: "Abstract: Daniel presents a working pipeline for digitizing a physical six-hole recorder flute into an electric one. Topics include various sensor chamber designs, measuring how the flute acoustically responds to breath pressure, fitting a model, and a special sound synthesis technique on ESP32.",
+      abstract: "Abstract: This talk presents a working pipeline for digitizing a physical six-hole recorder flute into an electric one. Topics include various sensor chamber designs, measuring how the flute acoustically responds to breath pressure, fitting a model, and a special sound synthesis technique on ESP32.",
     },
     {
       name: "Marco Donnarumma",
@@ -122,7 +122,7 @@ export const rmiWorkshop: WorkshopPageData = {
       imageUrl: "/assets/workshop_img/Bavo.jpeg",
       affiliation: "Ghent University",
       title: "Presentation Title: From Breathing in the Lab to at the Concert: Measuring and Sonifying Auditory-Respiratory Synchrony",
-      abstract: "Abstract: Bavo presents two studies on respiratory–musical interaction: a controlled lab study on spontaneous synchronization to adaptive breathing sounds, and a large-scale concert study using smartphone motion data from audience members. Together, they expose methodological tensions between precision, ecological validity, real-time sensing, and collective biofeedback.",
+      abstract: "Abstract: This talk presents two studies on respiratory–musical interaction: a controlled lab study on spontaneous synchronization to adaptive breathing sounds, and a large-scale concert study using smartphone motion data from audience members. Together, they expose methodological tensions between precision, ecological validity, real-time sensing, and collective biofeedback.",
     },
   ],
   discussionThemes: [
