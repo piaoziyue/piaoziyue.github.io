@@ -75,7 +75,7 @@ export const rmiWorkshop: WorkshopPageData = {
   schedule: [
     {
       title: "Part 1: Breathing Foundations",
-      duration: "2:00 – 3:00 PM",
+      duration: "2:00 – 3:00 PM BST (9:00 – 10:00 AM EDT)",
       description: [
         "The opening hour establishes a shared language between biological mechanics and digital data. We begin with an introduction to respiratory biomechanics, focusing on the distinction between diaphragmatic and thoracic movement and their respective roles in musical phrasing.",
         "We then demonstrate common real-time signal processing techniques for RMIs, including normalization, low-pass filtering for motion artifact suppression, and high-level feature extraction such as BPM and apnea detection.",
@@ -84,7 +84,7 @@ export const rmiWorkshop: WorkshopPageData = {
     },
     {
       title: "Part 2: Wearable Realities and Practitioner Insights",
-      duration: "3:15 – 4:45 PM",
+      duration: "3:15 – 4:45 PM BST (10:15 – 11:45 AM EDT)",
       description: [
         "This segment focuses on the implementation of RMIs in professional performance contexts. The session features three distinguished experts, who will each provide concentrated insights in a hybrid format.",
         "To support a diverse exchange, speakers are encouraged to use flexible formats such as short lectures, interactive demonstrations, and prototyping showcases, followed by a moderated Q&A.",
@@ -92,7 +92,7 @@ export const rmiWorkshop: WorkshopPageData = {
     },
     {
       title: "Part 3: Synthesis and Future Roadmap",
-      duration: "5:00 – 6:00 PM",
+      duration: "5:00 – 6:00 PM BST (12:00 – 1:00 PM EDT)",
       description: [
         "The final hour shifts from existing technologies to defining the next generation of RMIs. This session features a moderated panel discussion and an open forum involving invited researchers, on-site participants, and remote attendees.",
         "Senior researchers and professors will join the discussion.",
