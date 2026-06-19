@@ -109,7 +109,7 @@ export const rmiWorkshop: WorkshopPageData = {
       abstract: "Abstract: Daniel presents a working pipeline for digitizing a physical six-hole recorder flute into an electric one. Topics include various sensor chamber designs, measuring how the flute acoustically responds to breath pressure, fitting a model, and a special sound synthesis technique on ESP32.",
     },
     {
-      name: "Dr. Marco Donnarumma",
+      name: "Marco Donnarumma",
       url: "https://marcodonnarumma.com",
       imageUrl: "/assets/workshop_img/marco-donnarumma_by-dario-lagana_2_ed.jpg",
       affiliation: "Independent Artist and Researcher",
@@ -117,7 +117,7 @@ export const rmiWorkshop: WorkshopPageData = {
       abstract: "Abstract: The application of physiological computing to music and performance has a long history of varied approaches. In this talk, Marco will first offer a concise historical overview and then focus on the past 15 years of biophysical music, a practice that began in the context of NIME and evolved from conventional concert settings into elaborate stage productions, enabling hybrid formats combining performance art, theater and dance with interactive music. ",
     },
         {
-      name: "Dr. Bavo Van Kerrebroeck",
+      name: "Bavo Van Kerrebroeck",
       url: "https://scholar.google.com/citations?hl=en&user=6sPOK5gAAAAJ",
       imageUrl: "/assets/workshop_img/Bavo.jpeg",
       affiliation: "Ghent University",
@@ -133,7 +133,7 @@ export const rmiWorkshop: WorkshopPageData = {
   ],
   panelSpeakers: [
     {
-      name: "Dr. Xiao Xiao",
+      name: "Xiao Xiao",
       url: "https://www.linkedin.com/in/xiaosquared/",
       imageUrl: "/assets/workshop_img/Xiao Xiao.JPG",
       affiliation: "Institute for Future Technologies",
@@ -141,7 +141,7 @@ export const rmiWorkshop: WorkshopPageData = {
       status: "confirmed",
     },
     {
-      name: "Dr. Bavo Van Kerrebroeck",
+      name: "Bavo Van Kerrebroeck",
       imageUrl: "/assets/workshop_img/Bavo.jpeg",
       url: "https://scholar.google.com/citations?hl=en&user=6sPOK5gAAAAJ",
       affiliation: "Ghent University",
@@ -149,7 +149,23 @@ export const rmiWorkshop: WorkshopPageData = {
       status: "confirmed",
     },
     {
-      name: "Prof. Isabelle Cossette",
+      name: "Eleonora Oreggia",
+      url: "https://xname.cc/",
+      affiliation: "Goldsmiths, University of London",
+      imageUrl: "/assets/workshop_img/Eleonora.png",
+      bio: "Bio: Eleonora is the head of the Electronic Music, Computing and Technology BMus/BSc at Goldsmiths and the creator of REBUS, a contactless musical system for audiovisual performance composition using electromagnetic waves. Her research, based in the Waves Lab, explores electromagnetic sensing systems for expressive interaction in electronic music, performance and time based media art.",
+      status: "confirmed",
+    },
+    {
+      name: "Shinya Fujii",
+      url: "https://neuromusic.sfc.keio.ac.jp/?lang=en",
+      affiliation: "Keio University",
+      imageUrl: "/assets/workshop_img/Shinya.jpg",
+      bio: "Bio: Shinya Fujii is an Associate Professor in the Faculty of Environment and Information Studies, the Director of the NeuroMusic / x-Music Laboratory at Keio University Shonan Fujisawa Campus (SFC). His research interests encompass the Neurosciences and Music, particularly the neural origins of human musicality in perceiving and producing rhythm, beat, and groove.",
+      status: "confirmed",
+    },
+    {
+      name: "Isabelle Cossette",
       url: "https://www.mcgill.ca/music/isabelle-cossette",
       affiliation: "McGill University",
       imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
@@ -166,7 +182,7 @@ export const rmiWorkshop: WorkshopPageData = {
       bio: "Ziyue is a Ph.D. candidate in Music Technology at McGill University's Schulich School of Music, supervised by Prof. Marcelo M. Wanderley and Prof. Isabelle Cossette. Her research sits at the intersection of wearable design and embodied interaction, with a specialized interest in how wearable systems can capture respiratory physiology and be applied to embodied musical practices. She is currently collaborating with Yamaha on desining sensing wearables for capturing and analyzing breathing patterns during music performances. ",
     },
     {
-      name: "Dr. Kanyu (Cady) Chen",
+      name: "Kanyu (Cady) Chen",
       affiliation: "University of Tokyo",
       url: "https://www.linkedin.com/in/kanyu-c-507a56124",
       imageUrl: "/assets/workshop_img/Kanyu Chen.jpeg",
