@@ -164,6 +164,14 @@ export const rmiWorkshop: WorkshopPageData = {
       bio: "Bio: Shinya Fujii is an Associate Professor in the Faculty of Environment and Information Studies, the Director of the NeuroMusic / x-Music Laboratory at Keio University Shonan Fujisawa Campus (SFC). His research interests encompass the Neurosciences and Music, particularly the neural origins of human musicality in perceiving and producing rhythm, beat, and groove.",
       status: "confirmed",
     },
+        {
+      name: "Anna Huang",
+      url: "https://czhuang.github.io/",
+      affiliation: "Massachusetts Institute of Technology",
+      imageUrl: "/assets/workshop_img/Anna_Huang.png",
+      bio: "Bio: Cheng-Zhi Anna Huang is an associate professor at the Massachusetts Institute of Technology (MIT), with a shared position in the Music & Theater Arts Section and the Department of Electrical Engineering and Computer Science. Her research interests lie at the intersection of interaction-driven design and Generative AI, aiming to enable new ways of experiencing, learning, and creating music.",
+      status: "confirmed",
+    },
     {
       name: "Isabelle Cossette",
       url: "https://www.mcgill.ca/music/isabelle-cossette",
