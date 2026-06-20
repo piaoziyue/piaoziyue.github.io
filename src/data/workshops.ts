@@ -186,7 +186,7 @@ export const rmiWorkshop: WorkshopPageData = {
       affiliation: "University of Tokyo",
       url: "https://www.linkedin.com/in/kanyu-c-507a56124",
       imageUrl: "/assets/workshop_img/Kanyu Chen.jpeg",
-      bio: "Kanyu is a Postdoctoral Researcher at the University of Tokyo. She earned her Ph.D. from the Graduate School of Media Design at Keio University under the supervision of Prof. Kai Kunze and Prof. Akira Kato. Her research focuses on applying physiological sensing technologies to embodied skill acquisition. Specifically, she investigates how multimodal sensing technologies—including electromyography (EMG), ultrasonography, respiratory sensing, and audio signal analysis—can support vocal training and music cognition. Her work aims to make internal physiological processes perceptible and actionable, effectively bridging somatic awareness with expressive musical performance.",
+      bio: "Kanyu is a Researcher at the University of Tokyo. She earned her Ph.D. from the Graduate School of Media Design at Keio University under the supervision of Prof. Kai Kunze and Prof. Akira Kato. Her research focuses on applying physiological sensing technologies to embodied skill acquisition. Specifically, she investigates how multimodal sensing technologies—including electromyography (EMG), ultrasonography, respiratory sensing, and audio signal analysis—can support vocal training and music cognition. Her work aims to make internal physiological processes perceptible and actionable, effectively bridging somatic awareness with expressive musical performance.",
     },
   ],
   references: [
