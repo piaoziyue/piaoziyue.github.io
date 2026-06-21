@@ -65,18 +65,23 @@ export default function RMIsWorkshopPage() {
           </section>
 
           {/* Registration note */}
-          <p className="text-base leading-8 text-zinc-700">
-            Please register at the{" "}
-            <a
-              href="https://forms.gle/wqXE9jFXPeV5ZcBk7"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline hover:text-zinc-900"
-            >
-              NIME workshop registration link
-            </a>
-            .
-          </p>
+          <div className="space-y-2 text-base leading-8 text-zinc-700">
+            <p>
+              On-site registration is now closed.
+            </p>
+            <p>
+              If you would like to participate online, feel free to join by filling in{" "}
+              <a
+                href="https://forms.gle/sJ5G7cnm26jagNks5"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline hover:text-zinc-900"
+              >
+                this form
+              </a>
+              .
+            </p>
+          </div>
 
           <section className="space-y-5">
             <h2 className="font-serif text-2xl tracking-wide">Overview</h2>
