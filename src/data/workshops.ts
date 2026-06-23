@@ -171,15 +171,15 @@ export const rmiWorkshop: WorkshopPageData = {
       imageUrl: "/assets/workshop_img/Anna_Huang.png",
       bio: "Bio: Cheng-Zhi Anna Huang is an associate professor at the Massachusetts Institute of Technology (MIT), with a shared position in the Music & Theater Arts Section and the Department of Electrical Engineering and Computer Science. Her research interests lie at the intersection of interaction-driven design and Generative AI, aiming to enable new ways of experiencing, learning, and creating music.",
       status: "confirmed",
-    },
-    {
-      name: "Isabelle Cossette",
-      url: "https://www.mcgill.ca/music/isabelle-cossette",
-      affiliation: "McGill University",
-      imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
-      bio: "Bio: Isabelle is an Associate Professor of Music Education at the Schulich School of Music, McGill University. A key area of her research focuses on respiratory mechanics, chest wall dynamics, and breathing patterns in instrumentalists and singers. Her work provides foundational insights into how performers regulate and coordinate their bodies in musical performance.",
-      status: "confirmed",
     }
+    // {
+    //   name: "Isabelle Cossette",
+    //   url: "https://www.mcgill.ca/music/isabelle-cossette",
+    //   affiliation: "McGill University",
+    //   imageUrl: "/assets/workshop_img/Isabelle Cossette.png",
+    //   bio: "Bio: Isabelle is an Associate Professor of Music Education at the Schulich School of Music, McGill University. A key area of her research focuses on respiratory mechanics, chest wall dynamics, and breathing patterns in instrumentalists and singers. Her work provides foundational insights into how performers regulate and coordinate their bodies in musical performance.",
+    //   status: "confirmed",
+    // }
   ],
   organisers: [
     {
