@@ -30,6 +30,15 @@ export const publicationData: Publication[] = [
   //   // imageUrl: "/images/publication-image.jpg"
   // },
   {
+    year: "2026",
+    conference: "NIME",
+    title: "Exploring Breathing-Music Coupling: Using the Breathing Mirror for Somatic Reflection in Piano Performance",
+    authors: "Ziyue Piao, Yohei Wada, Isabelle Corssette, Marcelo Wanderley, Akira Maezawa",
+    paperUrl: "https://nime.org/proceedings/2026/nime2026_8.pdf",
+    imageUrl: "/assets/img/Breathing_Mirror_NIME26.png",
+    tldr: "Introducing the Breathing Mirror system, a multi-perspective somatic reflection methodology designed to externalize the breathing-music coupling in piano performance."
+  },
+  {
     year: "2025",
     conference: "CHI",
     title: "Project TapTap: A Longitudinal Study Exploring Non-Verbal Communication through Vibration Signals Between Teachers and Blind or Low Vision Music Learners",

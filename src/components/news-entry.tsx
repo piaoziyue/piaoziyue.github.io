@@ -7,7 +7,12 @@ export function NewsEntry({ news }: { news: News }) {
       <div className="flex flex-col flex-1">
         <p className="text-xs text-zinc-500 mb-1">{news.date}</p>
         <h4 className="font-serif text-md">
-          {news.link ? (
+          {news.titleHtml ? (
+            <span
+              className="text-zinc-800"
+              dangerouslySetInnerHTML={{ __html: news.titleHtml }}
+            />
+          ) : news.link ? (
             <a
               href={news.link}
               target="_blank"

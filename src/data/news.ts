@@ -1,6 +1,7 @@
 export interface News {
   date: string;
   title: string;
+  titleHtml?: string;
   link?: string;
 }
 
@@ -24,7 +25,7 @@ export const newsData: News[] = [
   {
     date: "April 2026",
     title: "A full paper and a workshop paper have been accepted at NIME 2026!",
-    link: "https://nime2026.org/",
+    titleHtml: `<a href="https://nime2026.org/proceedings/52.html" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-600">A full paper</a> and a <a href="https://piaoziyue.github.io/RMIs_workshop/" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-600">workshop paper</a> have been accepted at NIME 2026!`,
   },
   // {
   //   date: "March 2026",
