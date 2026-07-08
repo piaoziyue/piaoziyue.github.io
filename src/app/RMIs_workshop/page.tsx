@@ -320,6 +320,7 @@ export default function RMIsWorkshopPage() {
             <h2 className="font-serif text-2xl tracking-wide">Archive Photos</h2>
             <PhotoCarousel
               photos={[
+                "/assets/workshop_img/photos/IMG_5528.jpg",
                 "/assets/workshop_img/photos/IMG_0545.jpeg",
                 "/assets/workshop_img/photos/IMG_0549.jpeg",
                 "/assets/workshop_img/photos/IMG_0552.jpeg",
