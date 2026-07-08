@@ -7,6 +7,7 @@ import {
   type WorkshopSection,
   type WorkshopSpeaker,
 } from "@/data/workshops";
+import { PhotoCarousel } from "@/components/photo-carousel";
 
 export const metadata: Metadata = {
   title: `${rmiWorkshop.title} | ${aboutMe.name}`,
@@ -313,6 +314,27 @@ export default function RMIsWorkshopPage() {
                 <p key={reference.id}>{reference.citation}</p>
               ))}
             </div>
+          </section>
+
+          <section className="space-y-5 pb-8">
+            <h2 className="font-serif text-2xl tracking-wide">Archive Photos</h2>
+            <PhotoCarousel
+              photos={[
+                "/assets/workshop_img/photos/IMG_0545.jpeg",
+                "/assets/workshop_img/photos/IMG_0549.jpeg",
+                "/assets/workshop_img/photos/IMG_0552.jpeg",
+                "/assets/workshop_img/photos/IMG_0554.jpeg",
+                "/assets/workshop_img/photos/IMG_7723.jpeg",
+                "/assets/workshop_img/photos/IMG_7725.jpeg",
+                "/assets/workshop_img/photos/IMG_7727.jpeg",
+                "/assets/workshop_img/photos/IMG_7729.jpeg",
+                "/assets/workshop_img/photos/IMG_7732.jpeg",
+                "/assets/workshop_img/photos/IMG_7739.jpeg",
+                "/assets/workshop_img/photos/IMG_7745.jpeg",
+                "/assets/workshop_img/photos/IMG_7748.jpeg",
+                "/assets/workshop_img/photos/IMG_7750.jpeg",
+              ]}
+            />
           </section>
         </div>
       </div>

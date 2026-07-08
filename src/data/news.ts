@@ -12,6 +12,11 @@ export const newsData: News[] = [
 //     title: "I was accepted to my first artistic residency program in Bled Contemporary Music Week.",
 //     link: "https://enuntiatio-praefatio-formulae.com/FESTIVAL/",
 //   },
+  // {
+  //   date: "June 2026",
+  //   title: "I will serve as the volunteer chair of ISMIR 2026 and design chair of NIME 2027.",
+  //   link: "https://eurohaptics.org/ehc2026/program/previous-published-paper-session/#PPP-D",
+  // },
   {
     date: "May 2026",
     title: "A published journal article will be presented as a poster at EuroHaptics 2026, session D on July 8th.",
