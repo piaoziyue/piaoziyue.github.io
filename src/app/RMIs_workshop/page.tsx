@@ -65,24 +65,27 @@ export default function RMIsWorkshopPage() {
             </div>
           </section>
 
-          {/* Registration note */}
-          <div className="space-y-2 text-base leading-8 text-zinc-700">
-            <p>
-              On-site registration is now closed.
-            </p>
-            <p>
-              If you would like to participate online, feel free to join by filling in{" "}
-              <a
-                href="https://forms.gle/sJ5G7cnm26jagNks5"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline hover:text-zinc-900"
-              >
-                this form
-              </a>
-              .
-            </p>
-          </div>
+          <section className="space-y-5 pb-8">
+            <h2 className="font-serif text-2xl tracking-wide">Archive Photos</h2>
+            <PhotoCarousel
+              photos={[
+                "/assets/workshop_img/photos/IMG_5528.jpg",
+                "/assets/workshop_img/photos/IMG_0545.jpeg",
+                "/assets/workshop_img/photos/IMG_0549.jpeg",
+                "/assets/workshop_img/photos/IMG_0552.jpeg",
+                "/assets/workshop_img/photos/IMG_0554.jpeg",
+                "/assets/workshop_img/photos/IMG_7723.jpeg",
+                "/assets/workshop_img/photos/IMG_7725.jpeg",
+                "/assets/workshop_img/photos/IMG_7727.jpeg",
+                "/assets/workshop_img/photos/IMG_7729.jpeg",
+                "/assets/workshop_img/photos/IMG_7732.jpeg",
+                "/assets/workshop_img/photos/IMG_7739.jpeg",
+                "/assets/workshop_img/photos/IMG_7745.jpeg",
+                "/assets/workshop_img/photos/IMG_7748.jpeg",
+                "/assets/workshop_img/photos/IMG_7750.jpeg",
+              ]}
+            />
+          </section>
 
           <section className="space-y-5">
             <h2 className="font-serif text-2xl tracking-wide">Overview</h2>
@@ -314,28 +317,6 @@ export default function RMIsWorkshopPage() {
                 <p key={reference.id}>{reference.citation}</p>
               ))}
             </div>
-          </section>
-
-          <section className="space-y-5 pb-8">
-            <h2 className="font-serif text-2xl tracking-wide">Archive Photos</h2>
-            <PhotoCarousel
-              photos={[
-                "/assets/workshop_img/photos/IMG_5528.jpg",
-                "/assets/workshop_img/photos/IMG_0545.jpeg",
-                "/assets/workshop_img/photos/IMG_0549.jpeg",
-                "/assets/workshop_img/photos/IMG_0552.jpeg",
-                "/assets/workshop_img/photos/IMG_0554.jpeg",
-                "/assets/workshop_img/photos/IMG_7723.jpeg",
-                "/assets/workshop_img/photos/IMG_7725.jpeg",
-                "/assets/workshop_img/photos/IMG_7727.jpeg",
-                "/assets/workshop_img/photos/IMG_7729.jpeg",
-                "/assets/workshop_img/photos/IMG_7732.jpeg",
-                "/assets/workshop_img/photos/IMG_7739.jpeg",
-                "/assets/workshop_img/photos/IMG_7745.jpeg",
-                "/assets/workshop_img/photos/IMG_7748.jpeg",
-                "/assets/workshop_img/photos/IMG_7750.jpeg",
-              ]}
-            />
           </section>
         </div>
       </div>

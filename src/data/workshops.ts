@@ -41,7 +41,7 @@ export interface WorkshopPageData {
 export const rmiWorkshop: WorkshopPageData = {
   title: "Respiratory Musical Interfaces (RMIs) in NIME",
   date: "2:00 - 6:00 PM BST, June 23rd, 2026",
-  location: "Room 104, Loughborough University London, London, UK and online",
+  location: "Room 1.04, Loughborough University London, London, UK and online",
   bannerImageUrl: "/assets/workshop_img/NIME26_RMIs_teaser.png",
   overview: [
     "Breathing is a fundamental physiological process that occupies a unique space in human-computer interaction, sitting at the intersection of autonomic reflex and conscious control. In the context of New Interfaces for Musical Expression (NIME), Respiratory Musical Interfaces (RMIs) have emerged as a powerful modality for high-fidelity, embodied musical control.",
