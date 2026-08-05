@@ -50,12 +50,12 @@ export default function RootLayout({
             <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
               
             <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-                <a href="https://clustrmaps.com/site/1blfr" title="Visit tracker">
+                <a href="https://mapmyvisitors.com/profile/1c7b5" title="Visit tracker">
                   © {new Date().getFullYear()} {aboutMe.name}.
                 </a>
                 <img
-                  src="http://www.clustrmaps.com/map_v2.png?d=AOpTLz458w686Jm6qaHPabvrYzxp7Ln5KHnZCxykHig&cl=ffffff"
-                  alt="ClustrMaps Tracker"
+                  src="https://mapmyvisitors.com/map.png?d=uoD0Qy3hp1PgIzdGX992kQOODDqw3-G5h63jFHn-5B8&cl=ffffff"
+                  alt="mapmyvisitors Tracker"
                   style={{ display: "none" }} // Hides the image completely
                 />
               </div> 
