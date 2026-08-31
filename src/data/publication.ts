@@ -31,6 +31,16 @@ export const publicationData: Publication[] = [
   // },
   {
     year: "2026",
+    conference: "UbiComp/ISWC",
+    title: "GummiSoma: Co-Designing a Carbon-Nanotube Strain-Sensing Garment for Respiratory Tracking in Vocal Performance",
+    authors: "Ziyue Piao, Katsunori Suzuki, Naoto Kojima, Yohei Wada, Isabelle Corssette, Marcelo Wanderley, Akira Maezawa",
+    paperUrl: "https://doi.org/10.1145/3798063.3838827",
+    imageUrl: "/assets/img/GummiSoma_front_v1 Medium.jpeg",
+    videoUrl: "https://youtu.be/KVxbNY8ZzHs ",
+    tldr: "We designed a comfortable breathing tracking garment for singing performances."
+  },
+  {
+    year: "2026",
     conference: "NIME",
     title: "Exploring Breathing-Music Coupling: Using the Breathing Mirror for Somatic Reflection in Piano Performance",
     authors: "Ziyue Piao, Yohei Wada, Isabelle Corssette, Marcelo Wanderley, Akira Maezawa",
