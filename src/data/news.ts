@@ -27,24 +27,24 @@ export const newsData: News[] = [
     title: "I will serve as the Student Volunteer Chair of ISMIR 2026 and Design Chair of NIME 2027.",
     titleHtml: `I will serve as the Student Volunteer Chair of <a href="https://ismir2026.ismir.net/" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-600">ISMIR 2026</a> and Design Chair of <a href="https://www.nime2027.org/" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-600">NIME 2027</a>.`, // 
   },
-  // {
-  //   date: "May 2026",
-  //   title: "A published journal article will be presented as a poster at EuroHaptics 2026, session D on July 8th.",
-  //   link: "https://eurohaptics.org/ehc2026/program/previous-published-paper-session/#PPP-D",
-  // },
-  // {
-  //   date: "May 2026",
-  //   title: "We are organizing the 2026 CIRMMT Student Symposium on May 21 2026.",
-  //   link: "https://www.cirmmt.org/en/events/general-assembly/21-may-2026-ss-ga",
-  // },
-  // {
-  //   date: "April 2026",
-  //   title: "A full paper and a workshop paper have been accepted at NIME 2026!",
-  //   titleHtml: `<a href="https://nime2026.org/proceedings/52.html" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-600">A full paper</a> and a <a href="/RMIs_workshop" class="underline hover:text-zinc-600">workshop paper</a> have been accepted at NIME 2026!`,
-  // },
-  // {
-  //   date: "March 2026",
-  //   title: "A workshop paper has been accepted at the Body Transformation Experiences workshop at CHI 2026.",
-  //   link: "https://imbodylab.com/chi26-body-transformation-workshop/",
-  // },
+  {
+    date: "May 2026",
+    title: "A published journal article will be presented as a poster at EuroHaptics 2026, session D on July 8th.",
+    link: "https://eurohaptics.org/ehc2026/program/previous-published-paper-session/#PPP-D",
+  },
+  {
+    date: "May 2026",
+    title: "We are organizing the 2026 CIRMMT Student Symposium on May 21 2026.",
+    link: "https://www.cirmmt.org/en/events/general-assembly/21-may-2026-ss-ga",
+  },
+  {
+    date: "April 2026",
+    title: "A full paper and a workshop paper have been accepted at NIME 2026!",
+    titleHtml: `<a href="https://nime2026.org/proceedings/52.html" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-600">A full paper</a> and a <a href="https://piaoziyue.github.io/RMIs_workshop" target="_blank" rel="noopener noreferrer" class="underline hover:text-zinc-600">workshop paper</a> have been accepted at NIME 2026!`,
+  },
+  {
+    date: "March 2026",
+    title: "A workshop paper has been accepted at the Body Transformation Experiences workshop at CHI 2026.",
+    link: "https://imbodylab.com/chi26-body-transformation-workshop/",
+  },
 ];

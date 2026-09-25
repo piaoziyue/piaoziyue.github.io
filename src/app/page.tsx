@@ -4,12 +4,14 @@ import { PublicationEntry } from "@/components/publication-entry";
 import { publicationData } from "@/data/publication";
 import { ProfileSection } from "@/components/profile-section";
 import { aboutMe } from "@/data/aboutme";
-import { NewsEntry } from "@/components/news-entry";
+import { NewsSection } from "@/components/news-section";
 import { newsData } from "@/data/news";
 import { ExperienceEntry } from "@/components/experience-entry";
 import { experienceData } from "@/data/experience";
 import { PortfolioEntry } from "@/components/portfolio-entry";
 import { portfolioData } from "@/data/portfolio";
+import { OrganizedEventEntry } from "@/components/organized-event-entry";
+import { organizedEventsData } from "@/data/organized-events";
 import { sectionOrder, Section } from "@/data/section-order";
 
 export default function Home() {
@@ -46,18 +48,7 @@ export default function Home() {
                 case Section.News:
                   return (
                     newsData.length > 0 && (
-                      <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
-                          News
-                        </h2>
-                        <div className="space-y-12">
-                          {newsData.map((news, index) => (
-                            <div key={index}>
-                              <NewsEntry news={news} />
-                            </div>
-                          ))}
-                        </div>
-                      </section>
+                      <NewsSection key={sectionName} newsData={newsData} />
                     )
                   );
                 case Section.Education:
@@ -89,6 +80,23 @@ export default function Home() {
                               {index < publicationData.length - 1 && (
                                 <div className="h-px bg-zinc-200 my-8" />
                               )}
+                            </div>
+                          ))}
+                        </div>
+                      </section>
+                    )
+                  );
+                case Section.OrganizedEvents:
+                  return (
+                    organizedEventsData.length > 0 && (
+                      <section key={sectionName}>
+                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                          Organized Events
+                        </h2>
+                        <div className="space-y-12">
+                          {organizedEventsData.map((event, index) => (
+                            <div key={index}>
+                              <OrganizedEventEntry event={event} />
                             </div>
                           ))}
                         </div>
