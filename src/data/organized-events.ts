@@ -6,6 +6,11 @@ export interface OrganizedEvent {
 
 export const organizedEventsData: OrganizedEvent[] = [
   {
+    date: "October 2026",
+    title: "N2Women Panel Discussion at UbiCom/ISWC 2026",
+    link: "https://www.ubicomp.org/ubicomp-iswc-2026/n2women-event/",
+  },
+  {
     date: "June 2026",
     title: "Respiratory Musical Interfaces in NIME Workshop (RMIs)",
     link: "https://piaoziyue.github.io/RMIs_workshop",

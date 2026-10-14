@@ -29,7 +29,6 @@ export const aboutMe: AboutMe = {
   googleScholarUrl: "https://scholar.google.com/citations?user=5ZCY2U8AAAAJ&hl",
   githubUsername: "piaoziyue",
   linkedinUsername: "ziyue-monica-piao-312924216",
-  twitterUsername: "ParkZiyue",
   // blogUrl: "https://",
   cvUrl: "/assets/Ziyue Piao_CV.pdf",
   // cvUrl: "https://mcgill-my.sharepoint.com/:b:/r/personal/ziyue_piao_mail_mcgill_ca/Documents/CVs%20%26%20certificates/Ziyue%20Piao_CV_20250121.pdf?csf=1&web=1&e=CHElmJ",
