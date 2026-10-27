@@ -17,7 +17,7 @@ export function PhotoCarousel({ photos }: PhotoCarouselProps) {
   return (
     <div className="relative w-full select-none">
       {/* Main image */}
-      <div className="relative w-full overflow-hidden rounded-2xl bg-zinc-100" style={{ aspectRatio: "16/9" }}>
+      <div className="relative w-full overflow-hidden rounded-2xl bg-zinc-100 dark:bg-zinc-800/80" style={{ aspectRatio: "16/9" }}>
         <Image
           key={photos[current]}
           src={photos[current]}
@@ -30,24 +30,24 @@ export function PhotoCarousel({ photos }: PhotoCarouselProps) {
         {/* Left button */}
         <button
           onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 shadow hover:bg-white transition"
+          className="absolute left-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-zinc-800/80 shadow hover:bg-white dark:hover:bg-zinc-700 transition"
           aria-label="Previous photo"
         >
-          <ChevronLeft size={20} className="text-zinc-700" />
+          <ChevronLeft size={20} className="text-zinc-700 dark:text-zinc-200" />
         </button>
 
         {/* Right button */}
         <button
           onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 shadow hover:bg-white transition"
+          className="absolute right-3 top-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center rounded-full bg-white/80 dark:bg-zinc-800/80 shadow hover:bg-white dark:hover:bg-zinc-700 transition"
           aria-label="Next photo"
         >
-          <ChevronRight size={20} className="text-zinc-700" />
+          <ChevronRight size={20} className="text-zinc-700 dark:text-zinc-200" />
         </button>
       </div>
 
       {/* Counter */}
-      <p className="mt-3 text-center text-sm text-zinc-400">
+      <p className="mt-3 text-center text-sm text-zinc-400 dark:text-zinc-500">
         {current + 1} / {photos.length}
       </p>
 
@@ -59,7 +59,7 @@ export function PhotoCarousel({ photos }: PhotoCarouselProps) {
             onClick={() => setCurrent(i)}
             aria-label={`Go to photo ${i + 1}`}
             className={`h-1.5 rounded-full transition-all ${
-              i === current ? "w-5 bg-zinc-600" : "w-1.5 bg-zinc-300"
+              i === current ? "w-5 bg-zinc-600 dark:bg-zinc-300" : "w-1.5 bg-zinc-300 dark:bg-zinc-700"
             }`}
           />
         ))}

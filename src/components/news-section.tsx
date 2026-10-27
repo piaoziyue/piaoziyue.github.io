@@ -21,7 +21,7 @@ export function NewsSection({ newsData, initialCount = 3 }: NewsSectionProps) {
 
   return (
     <section>
-      <h2 className="font-serif text-l mb-12 tracking-wide uppercase">News</h2>
+      <h2 className="font-serif text-zinc-700 dark:text-zinc-300 text-l mb-12 tracking-wide uppercase">News</h2>
       <div className="space-y-12">
         {displayedNews.map((news, index) => (
           <div key={index}>
@@ -35,7 +35,7 @@ export function NewsSection({ newsData, initialCount = 3 }: NewsSectionProps) {
           <button
             type="button"
             onClick={() => setIsExpanded(!isExpanded)}
-            className="group inline-flex items-center gap-1.5 text-xs text-zinc-500 hover:text-zinc-900 transition-colors duration-300 tracking-wider uppercase cursor-pointer"
+            className="group inline-flex items-center gap-1.5 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300 tracking-wider uppercase cursor-pointer"
           >
             {isExpanded ? (
               <>

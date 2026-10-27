@@ -16,7 +16,7 @@ import { sectionOrder, Section } from "@/data/section-order";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-[#FFFCF8]">
+    <div className="min-h-screen bg-[#FFFCF8] dark:bg-[#141416] text-zinc-900 dark:text-zinc-100 transition-colors duration-200">
       {/* Don't have a great call on whether max-w-screen-xl is better */}
       <div className="max-w-screen-lg mx-auto px-8 py-24">
         {/* Grid Layout */}
@@ -35,7 +35,7 @@ export default function Home() {
             {aboutMe.description && (
               <section>
                 <p
-                  className="font-serif text-m leading-relaxed text-zinc-700 [&_a]:underline [&_a]:text-zinc-900 [&_a:hover]:text-zinc-600"
+                  className="font-serif text-m leading-relaxed text-zinc-700 dark:text-zinc-300 [&_a]:underline [&_a]:text-zinc-900 dark:[&_a]:text-zinc-100 [&_a:hover]:text-zinc-600 dark:[&_a:hover]:text-zinc-300"
                   dangerouslySetInnerHTML={{ __html: aboutMe.description }}
                 />
               </section>
@@ -55,7 +55,7 @@ export default function Home() {
                   return (
                     educationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-zinc-700 mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-zinc-700 dark:text-zinc-300 mb-12 tracking-wide uppercase">
                           Education
                         </h2>
                         <div className="space-y-12">
@@ -70,7 +70,7 @@ export default function Home() {
                   return (
                     publicationData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-zinc-700 dark:text-zinc-300 text-l mb-12 tracking-wide uppercase">
                           Publications
                         </h2>
                         <div className="space-y-12">
@@ -78,7 +78,7 @@ export default function Home() {
                             <div key={index}>
                               <PublicationEntry publication={publication} />
                               {index < publicationData.length - 1 && (
-                                <div className="h-px bg-zinc-200 my-8" />
+                                <div className="h-px bg-zinc-200 dark:bg-zinc-800 my-8" />
                               )}
                             </div>
                           ))}
@@ -90,7 +90,7 @@ export default function Home() {
                   return (
                     organizedEventsData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-l mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-zinc-700 dark:text-zinc-300 text-l mb-12 tracking-wide uppercase">
                           Organized Events
                         </h2>
                         <div className="space-y-12">
@@ -107,7 +107,7 @@ export default function Home() {
                   return (
                     experienceData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-zinc-700 dark:text-zinc-300 text-md mb-12 tracking-wide uppercase">
                           Experience
                         </h2>
                         <div className="space-y-12">
@@ -125,7 +125,7 @@ export default function Home() {
                   return (
                     portfolioData.length > 0 && (
                       <section key={sectionName}>
-                        <h2 className="font-serif text-md mb-12 tracking-wide uppercase">
+                        <h2 className="font-serif text-zinc-700 dark:text-zinc-300 text-md mb-12 tracking-wide uppercase">
                           Portfolio
                         </h2>
                         <div className="space-y-12">

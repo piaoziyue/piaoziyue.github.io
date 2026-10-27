@@ -23,19 +23,19 @@ export function WorkshopEntry({ workshop }: WorkshopEntryProps) {
       )}
 
       <div className="flex-1">
-        <h3 className="font-serif text-xl mb-2">{workshop.title}</h3>
+        <h3 className="font-serif text-xl mb-2 text-zinc-900 dark:text-zinc-100">{workshop.title}</h3>
         {(workshop.date || workshop.location) && (
-          <p className="text-xs text-zinc-500 mb-3">
+          <p className="text-xs text-zinc-500 dark:text-zinc-400 mb-3">
             {workshop.date} {workshop.date && workshop.location ? `· ${workshop.location}` : workshop.location}
           </p>
         )}
         {workshop.description && (
-          <p className="text-zinc-700 leading-relaxed mb-4">{workshop.description}</p>
+          <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed mb-4">{workshop.description}</p>
         )}
         {workshop.signupUrl && (
           <a
             href={workshop.signupUrl}
-            className="inline-flex items-center gap-2 text-sm text-zinc-600 hover:text-zinc-900 transition-colors"
+            className="inline-flex items-center gap-2 text-sm text-zinc-600 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors"
             target="_blank"
             rel="noopener noreferrer"
           >
