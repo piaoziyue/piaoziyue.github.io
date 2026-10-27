@@ -66,12 +66,12 @@ export default function RootLayout({
       >
         <ThemeToggle />
         <main className="">{children}</main>
-        <footer className="border-t border-neutral-200 dark:border-neutral-800 bg-[#FFFCF8] dark:bg-[#141416] transition-colors duration-200">
+        <footer className="border-t border-neutral-200 dark:border-[#2f2b24] bg-[#FFFCF8] dark:bg-[#191816] transition-colors duration-200">
           <div className="flex flex-row mx-auto max-w-7xl px-6 py-12 md:flex md:items-start md:justify-between ">
-            <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
+            <div className="mb-4 text-sm text-neutral-600 dark:text-[#9E9688]">
               
-            <div className="mb-4 text-sm text-neutral-600 dark:text-neutral-400">
-                <a href="https://mapmyvisitors.com/profile/1c7b5" title="Visit tracker" className="hover:text-neutral-900 dark:hover:text-neutral-200 transition-colors">
+            <div className="mb-4 text-sm text-neutral-600 dark:text-[#9E9688]">
+                <a href="https://mapmyvisitors.com/profile/1c7b5" title="Visit tracker" className="hover:text-neutral-900 dark:hover:text-[#F5EFE6] transition-colors">
                   © {new Date().getFullYear()} {aboutMe.name}.
                 </a>
                 <img
@@ -82,18 +82,18 @@ export default function RootLayout({
               </div> 
               
               {aboutMe.secretDescription && (
-                <p className="text-xs text-neutral-600 dark:text-neutral-400 mt-4">
+                <p className="text-xs text-neutral-600 dark:text-[#9E9688] mt-4">
                   {aboutMe.secretDescription}
                 </p>
               )}
             </div>
 
             <div className="mb-4">
-              <p className="text-sm text-neutral-500 dark:text-neutral-400 justify">
+              <p className="text-sm text-neutral-500 dark:text-[#8C8477] justify">
                 Built with{" "}
                 <a
                   href="https://github.com/tovacinni/research-website-template"
-                  className="underline hover:text-neutral-800 dark:hover:text-neutral-200 transition-colors"
+                  className="underline hover:text-neutral-800 dark:hover:text-[#F5EFE6] transition-colors"
                 >
                   research-website-template
                 </a>

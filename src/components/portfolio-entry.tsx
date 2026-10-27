@@ -17,11 +17,11 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
         </div>
       )}
       <div className="flex flex-col flex-1">
-        <h3 className="font-serif text-md mb-3 text-zinc-900 dark:text-zinc-100">
+        <h3 className="font-serif text-md mb-3 text-zinc-900 dark:text-[#F5EFE6]">
           {portfolio.projectUrl ? (
             <a
               href={portfolio.projectUrl}
-              className="group inline-flex items-center gap-2 hover:text-zinc-600 dark:hover:text-zinc-300 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 hover:text-zinc-600 dark:hover:text-[#EDE6D8] transition-colors duration-300"
             >
               {portfolio.title}
               {/* <ArrowUpRight
@@ -51,7 +51,7 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
           {portfolio.projectUrl && (
             <a
               href={portfolio.projectUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-[#A8A092] hover:text-zinc-900 dark:hover:text-[#F5EFE6] transition-colors duration-300"
             >
               <ArrowUpRight
                 size={12}

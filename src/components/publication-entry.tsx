@@ -22,25 +22,25 @@ export function PublicationEntry({
       )}
       <div className="flex flex-col flex-1">
         <div className="flex flex-row gap-4 items-center mb-2">
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
+          <p className="text-xs text-zinc-500 dark:text-[#968E80]">
             {publication.conference} {publication.year}
           </p>
           {publication.award && (
-            <div className="group flex px-2 py-1 bg-gradient-to-r from-amber-50 to-rose-50 dark:from-amber-950/40 dark:to-rose-950/40 rounded-md items-center shadow-md border border-amber-100/50 dark:border-amber-800/40 relative overflow-hidden hover:rotate-1 transition-all duration-300">
-              <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/90 dark:via-white/20 to-transparent" />
-              <p className="text-xs text-amber-700 dark:text-amber-300 font-medium relative">
+            <div className="group flex px-2 py-1 bg-gradient-to-r from-amber-50 to-rose-50 dark:from-[#2e251b] dark:to-[#2a1d1d] rounded-md items-center shadow-md border border-amber-100/50 dark:border-[#4d3a28]/60 relative overflow-hidden hover:rotate-1 transition-all duration-300">
+              <div className="absolute inset-0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/90 dark:via-white/10 to-transparent" />
+              <p className="text-xs text-amber-700 dark:text-[#ECC99B] font-medium relative">
                 {publication.award}
               </p>
             </div>
           )}
         </div>
-        <h3 className="font-serif text-md mb-3 text-zinc-900 dark:text-zinc-100">{publication.title}</h3>
-        <p className="text-sm text-zinc-600 dark:text-zinc-300 mb-4">{publication.authors}</p>
+        <h3 className="font-serif text-md mb-3 text-zinc-900 dark:text-[#F5EFE6]">{publication.title}</h3>
+        <p className="text-sm text-zinc-600 dark:text-[#D3CCC0] mb-4">{publication.authors}</p>
         <div className="flex flex-row gap-6">
           {publication.paperUrl && (
             <a
               href={publication.paperUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-[#A8A092] hover:text-zinc-900 dark:hover:text-[#F5EFE6] transition-colors duration-300"
             >
               <ArrowUpRight
                 size={12}
@@ -52,7 +52,7 @@ export function PublicationEntry({
           {publication.videoUrl && (
             <a
               href={publication.videoUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-[#A8A092] hover:text-zinc-900 dark:hover:text-[#F5EFE6] transition-colors duration-300"
             >
               <ArrowUpRight
                 size={12}
@@ -64,7 +64,7 @@ export function PublicationEntry({
           {publication.codeUrl && (
             <a
               href={publication.codeUrl}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-[#A8A092] hover:text-zinc-900 dark:hover:text-[#F5EFE6] transition-colors duration-300"
             >
               <ArrowUpRight
                 size={12}
@@ -76,7 +76,7 @@ export function PublicationEntry({
           {publication.bibtex && (
             <a
               href={publication.bibtex}
-              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-zinc-400 hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors duration-300"
+              className="group inline-flex items-center gap-2 text-xs text-zinc-500 dark:text-[#A8A092] hover:text-zinc-900 dark:hover:text-[#F5EFE6] transition-colors duration-300"
             >
               <ArrowUpRight
                 size={12}
@@ -87,7 +87,7 @@ export function PublicationEntry({
           )}
         </div>
         {publication.tldr && (
-          <p className="text-sm italic text-zinc-600 dark:text-zinc-400 mt-4">
+          <p className="text-sm italic text-zinc-600 dark:text-[#B5ADA0] mt-4">
             {publication.tldr}
           </p>
         )}

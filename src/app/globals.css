@@ -8,8 +8,8 @@
 }
 
 .dark {
-  --background: #141416;
-  --foreground: #f4f4f5;
+  --background: #191816;
+  --foreground: #EDE6D8;
 }
 
 body {
@@ -17,6 +17,17 @@ body {
   background: var(--background);
   font-family: var(--source-serif-font), Georgia, serif;
   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Subtle selection color matching the warm ivory/charcoal tones */
+::selection {
+  background-color: #e5ded1;
+  color: #171717;
+}
+
+.dark ::selection {
+  background-color: #3d372e;
+  color: #F5EFE6;
 }
 
 /* Elements marked with serif class or font-serif will use Source Serif */
