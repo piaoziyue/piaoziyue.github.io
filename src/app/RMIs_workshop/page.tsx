@@ -322,8 +322,4 @@ export default function RMIsWorkshopPage() {
       </div>
     </div>
   );
-        </div>
-      </div>
-    </div>
-  );
 }
