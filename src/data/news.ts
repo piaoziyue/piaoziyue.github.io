@@ -9,12 +9,12 @@ export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
     date: "October 2026",
-    title: "I am a visiting researcher at Keio University Graduate School of Media Design (KMD) hosted by prof. Akira Kato and Dr. Kanyu Chen.",
+    title: "I am a visiting researcher at Keio University Graduate School of Media Design (KMD) hosted by Prof. Akira Kato and Dr. Kanyu Chen.",
     link: "https://www.kmd.keio.ac.jp/",
   },
   {
     date: "October 2026",
-    title: "Honored to receive the N2Women Young Researcher Fellowship at UbiComp/ISWC 2026! Join us for the N2Women Panel Discussion on October 12.",
+    title: "Honored to receive the N2Women Young Researcher Fellowship at UbiComp/ISWC 2026!",
     link: "https://www.ubicomp.org/ubicomp-iswc-2026/n2women-event/",
   },
   {
