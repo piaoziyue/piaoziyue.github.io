@@ -7,14 +7,22 @@
   --foreground: #171717;
 }
 
-.dark {
+html.dark,
+body.dark,
+.dark,
+[data-theme="dark"] {
   --background: #191816;
   --foreground: #EDE6D8;
 }
 
+html {
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
 body {
   color: var(--foreground);
-  background: var(--background);
+  background-color: var(--background);
   font-family: var(--source-serif-font), Georgia, serif;
   transition: background-color 0.25s ease, color 0.25s ease;
 }
@@ -25,7 +33,9 @@ body {
   color: #171717;
 }
 
-.dark ::selection {
+.dark ::selection,
+html.dark ::selection,
+body.dark ::selection {
   background-color: #3d372e;
   color: #F5EFE6;
 }
