@@ -60,6 +60,11 @@ export default function RootLayout({
             `,
           }}
         />
+        <script
+          data-goatcounter="https://piaoziyue.goatcounter.com/count"
+          async
+          src="//gc.zgo.at/count.js"
+        />
       </head>
       <body
         suppressHydrationWarning
@@ -70,16 +75,16 @@ export default function RootLayout({
         <footer className="border-t border-neutral-200 dark:border-[#2f2b24] bg-[#FFFCF8] dark:bg-[#191816] transition-colors duration-200">
           <div className="flex flex-row mx-auto max-w-7xl px-6 py-12 md:flex md:items-start md:justify-between ">
             <div className="mb-4 text-sm text-neutral-600 dark:text-[#9E9688]">
-              
-            <div className="mb-4 text-sm text-neutral-600 dark:text-[#9E9688]">
-                <a href="https://mapmyvisitors.com/profile/1c7b5" title="Visit tracker" className="hover:text-neutral-900 dark:hover:text-[#F5EFE6] transition-colors">
+              <div>
+                <a
+                  href="https://piaoziyue.goatcounter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  title="Visitor Statistics"
+                  className="hover:text-neutral-900 dark:hover:text-[#F5EFE6] transition-colors"
+                >
                   © {new Date().getFullYear()} {aboutMe.name}.
                 </a>
-                <img
-                  src="https://mapmyvisitors.com/map.png?d=uoD0Qy3hp1PgIzdGX992kQOODDqw3-G5h63jFHn-5B8&cl=ffffff"
-                  alt="mapmyvisitors Tracker"
-                  style={{ display: "none" }} // Hides the image completely
-                />
               </div> 
               
               {aboutMe.secretDescription && (
