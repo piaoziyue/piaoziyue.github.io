@@ -28,7 +28,7 @@ export const portfolioData: Portfolio[] = [
   // },
   {
     // Studio site lives in public/xugu/ and is served at piaoziyue.github.io/xugu/
-    title: "XŪGU Studio 虚谷 · Audio-Visual Artworks",
+    title: "XŪGU Studio · Interactive Artworks",
     description: "",
     projectUrl: "/xugu/",
     imageUrl:
