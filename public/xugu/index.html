@@ -7,7 +7,7 @@
 <meta name="description" content="XŪGU STUDIO 虚谷 — art and technology studio. Audio-visual interactive works with wearables and the body, drawing on Daoist thought, folk song, ritual and Chinese medicine.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@200;300;400;500&family=Geist:wght@300;400;500&family=Geist+Mono:wght@400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+SC:wght@200;300;400;500&family=Geist:wght@300;400;500&family=Geist+Mono:wght@400&display=swap">
 <style>
 /* Layout: washi-paper page, wide 留白 margins; hero = wordmark beside a playable seven-string qin; works archive; five threads as single characters. */
 :root {
@@ -23,6 +23,7 @@
   --clay: #B08A62;
   --header-bg: rgba(251, 251, 249, 0.88);
 
+  --f-logo: 'Cormorant Garamond', 'PT Serif', Georgia, serif;
   --f-display: 'PT Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif;
   --f-zh: 'Noto Serif SC', 'Songti SC', 'STSong', SimSun, serif;
   --f-body: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
@@ -91,7 +92,7 @@ header.top {
 }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand b { font-family: var(--f-display); font-weight: 400; font-size: 19px; letter-spacing: 0.16em; }
+.brand b { font-family: var(--f-logo); font-weight: 400; font-size: 22px; letter-spacing: 0.18em; }
 .top nav { display: none; gap: 28px; }
 .top nav a { text-decoration: none; transition: color .2s; }
 .top nav a:hover { color: var(--ink); }
@@ -113,8 +114,8 @@ header.top {
 @media (min-width: 960px) { .hero-grid { grid-template-columns: 5fr 7fr; gap: 56px; } .hero .wrap { padding-block: 88px 48px; } }
 .mark { display: flex; align-items: flex-start; gap: 18px; }
 .mark h1 {
-  margin: 0; font-family: var(--f-display); font-weight: 300; line-height: 0.86;
-  font-size: clamp(64px, 12.5vw, 124px); letter-spacing: -0.02em;
+  margin: 0; font-family: var(--f-logo); font-weight: 300; line-height: 0.86;
+  font-size: clamp(76px, 15vw, 148px); letter-spacing: -0.01em;
 }
 .mark h1 small { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.62em; font-weight: 400; color: var(--ink-2); margin-top: 18px; padding-left: 6px; line-height: 1; }
 .mark .seal--v { font-size: 22px; margin-top: 12px; padding: 9px 6px; border-width: 2px; }
@@ -306,7 +307,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
   <section class="band" id="studio">
     <div class="wrap">
       <div class="sec-head">
-        <h2><span>XŪGU</span><span class="seal" style="font-size:22px;padding:6px 7px;border-width:2px;align-self:center">虚谷</span></h2>
+        <h2><span style="font-family:var(--f-logo);font-weight:300">XŪGU</span><span class="seal" style="font-size:22px;padding:6px 7px;border-width:2px;align-self:center">虚谷</span></h2>
       </div>
       <div class="studio">
         <div class="studio-text">
