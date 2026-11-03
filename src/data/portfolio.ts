@@ -27,10 +27,10 @@ export const portfolioData: Portfolio[] = [
   //   // codeUrl: "https://github.com/username/project",
   // },
   {
-    // Studio site lives in public/xugu/ and is served at piaoziyue.github.io/xugu/
-    title: "XŪGU Studio 虚谷 · Audio-Visual Artworks",
+    title: "Dao: A Laptop Orchestra Performance",
     description: "",
-    projectUrl: "/xugu/",
+    //   "A framework for discovering causal relationships in high-dimensional time series data using state-of-the-art machine learning techniques.",
+    projectUrl: "https://youtu.be/srSfYNQEwgs?si=5plhiUn5e28fvjGM",
     imageUrl:
       "/assets/img/portfolio/performance/per_dao.png",
   },
