@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>XŪGU Studio 虚谷</title>
+<meta name="description" content="XŪGU STUDIO 虚谷 — art and technology studio. Audio-visual interactive works with wearables and the body, drawing on Daoist thought, folk song, ritual and Chinese medicine.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+SC:wght@200;300;400;500&family=Hanken+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap">
+<style>
+/* Layout: washi-paper page, wide 留白 margins; hero = wordmark beside a playable seven-string qin; works archive; five threads as single characters. */
+:root {
+  --paper: #FBFBF9;
+  --paper-2: #F3F2EC;
+  --ink: #1A1A1A;
+  --ink-2: #4F4F4A;
+  --ink-3: #7E7D76;
+  --rule: rgba(26, 26, 26, 0.10);
+  --rule-strong: rgba(26, 26, 26, 0.22);
+  --seal: #A43B2C;
+  --jade: #6F8A7C;
+  --clay: #B08A62;
+  --header-bg: rgba(251, 251, 249, 0.88);
+
+  --f-display: 'Cormorant Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --f-zh: 'Noto Serif SC', 'Songti SC', 'STSong', SimSun, serif;
+  --f-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+
+  --max: 1120px;
+  --gut: max(16px, env(safe-area-inset-left, 0px));
+  --gut-r: max(16px, env(safe-area-inset-right, 0px));
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --paper: #121211; --paper-2: #1A1A18; --ink: #ECEBE6; --ink-2: #B3B2AB; --ink-3: #85847D;
+    --rule: rgba(236, 235, 230, 0.10); --rule-strong: rgba(236, 235, 230, 0.24);
+    --seal: #DE4C38; --jade: #9EB5AA; --clay: #D4B999; --header-bg: rgba(18, 18, 17, 0.88);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --paper: #121211; --paper-2: #1A1A18; --ink: #ECEBE6; --ink-2: #B3B2AB; --ink-3: #85847D;
+  --rule: rgba(236, 235, 230, 0.10); --rule-strong: rgba(236, 235, 230, 0.24);
+  --seal: #DE4C38; --jade: #9EB5AA; --clay: #D4B999; --header-bg: rgba(18, 18, 17, 0.88);
+  color-scheme: dark;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0; background: var(--paper); color: var(--ink);
+  font-family: var(--f-body); font-weight: 300; font-size: 15px; line-height: 1.65;
+  -webkit-font-smoothing: antialiased; overflow-x: hidden;
+}
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 60; background: var(--paper); }
+::selection { background: color-mix(in srgb, var(--clay) 30%, transparent); }
+a { color: inherit; }
+:focus-visible { outline: 1.5px solid var(--seal); outline-offset: 3px; }
+button { font: inherit; color: inherit; background: none; border: 0; padding: 0; cursor: pointer; }
+
+.grain {
+  position: fixed; inset: 0; pointer-events: none; z-index: 70; opacity: 0.045; mix-blend-mode: multiply;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .grain { mix-blend-mode: screen; filter: invert(1); opacity: 0.03; } }
+:root[data-theme="dark"] .grain { mix-blend-mode: screen; filter: invert(1); opacity: 0.03; }
+
+.wrap { max-width: var(--max); margin: 0 auto; padding-left: var(--gut); padding-right: var(--gut-r); }
+@media (min-width: 720px) { .wrap { padding-left: max(40px, env(safe-area-inset-left, 0px)); padding-right: max(40px, env(safe-area-inset-right, 0px)); } }
+
+.mono { font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--ink-3); font-weight: 400; }
+.zh { font-family: var(--f-zh); }
+
+/* Seal (印章) */
+.seal {
+  display: inline-grid; place-items: center; border: 1.5px solid var(--seal); color: var(--seal);
+  font-family: var(--f-zh); font-weight: 500; line-height: 1; border-radius: 2px; user-select: none;
+  padding: 3px 4px; font-size: 12px; letter-spacing: 0.05em;
+}
+.seal--v { writing-mode: vertical-rl; padding: 6px 4px; letter-spacing: 0.12em; }
+.seal--solid { background: var(--seal); color: var(--paper); }
+
+/* Header */
+header.top {
+  position: sticky; top: env(safe-area-inset-top, 0px); z-index: 50;
+  background: var(--header-bg); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+.top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+.brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand b { font-family: var(--f-display); font-weight: 400; font-size: 22px; letter-spacing: 0.18em; }
+.top nav { display: none; gap: 28px; }
+.top nav a { text-decoration: none; transition: color .2s; }
+.top nav a:hover { color: var(--ink); }
+@media (min-width: 820px) { .top nav { display: flex; } }
+.controls { display: flex; align-items: center; gap: 10px; }
+.langs { display: flex; border: 1px solid var(--rule-strong); border-radius: 999px; padding: 2px; }
+.langs button { font-family: var(--f-mono); font-size: 10px; padding: 3px 9px; border-radius: 999px; color: var(--ink-3); transition: color .2s, background .2s; }
+.langs button[aria-pressed="true"] { background: var(--ink); color: var(--paper); }
+.langs button:hover:not([aria-pressed="true"]) { color: var(--ink); }
+.icon-btn { width: 28px; height: 28px; border: 1px solid var(--rule-strong); border-radius: 50%; display: grid; place-items: center; color: var(--ink-2); }
+.icon-btn:hover { color: var(--ink); border-color: var(--ink-3); }
+.icon-btn svg { width: 14px; height: 14px; }
+
+/* Hero */
+.hero { border-bottom: 1px solid var(--rule); }
+.hero .wrap { padding-block: 56px 40px; display: grid; gap: 40px; }
+.hero-meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.hero-grid { display: grid; gap: 36px; align-items: center; }
+@media (min-width: 960px) { .hero-grid { grid-template-columns: 5fr 7fr; gap: 56px; } .hero .wrap { padding-block: 88px 48px; } }
+.mark { display: flex; align-items: flex-start; gap: 18px; }
+.mark h1 {
+  margin: 0; font-family: var(--f-display); font-weight: 300; line-height: 0.86;
+  font-size: clamp(76px, 15vw, 148px); letter-spacing: -0.01em;
+}
+.mark h1 small { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.62em; font-weight: 400; color: var(--ink-2); margin-top: 18px; padding-left: 6px; line-height: 1; }
+.mark .seal--v { font-size: 22px; margin-top: 12px; padding: 9px 6px; border-width: 2px; }
+.lede { max-width: 30em; display: grid; gap: 14px; }
+.lede .kicker { font-family: var(--f-display); font-size: 25px; font-weight: 400; line-height: 1.25; color: var(--ink); margin: 0; text-wrap: balance; }
+.lede p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
+.cta { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 8px; }
+.btn { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding: 12px 20px; border: 1px solid var(--ink); transition: background .2s, color .2s, border-color .2s; }
+.btn--solid { background: var(--ink); color: var(--paper); }
+.btn--solid:hover { background: transparent; color: var(--ink); }
+.btn--line { border-color: var(--rule-strong); color: var(--ink-2); }
+.btn--line:hover { border-color: var(--ink); color: var(--ink); }
+
+/* Qin */
+.qin { position: relative; min-width: 0; }
+.qin canvas { display: block; width: 100%; height: 380px; touch-action: pan-y; cursor: crosshair; }
+@media (min-width: 960px) { .qin canvas { height: 440px; } }
+.qin-foot { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--rule); padding-top: 12px; }
+.qin-foot .hint { font-size: 12.5px; color: var(--ink-3); max-width: 34em; }
+.sound-btn { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-2); border: 1px solid var(--rule-strong); border-radius: 999px; padding: 6px 12px; }
+.sound-btn .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--ink-3); transition: background .2s, box-shadow .2s; }
+.sound-btn[aria-pressed="true"] { color: var(--ink); border-color: var(--ink-3); }
+.sound-btn[aria-pressed="true"] .dot { background: var(--seal); box-shadow: 0 0 0 3px color-mix(in srgb, var(--seal) 22%, transparent); }
+.qin-label { position: absolute; top: 4px; left: 0; pointer-events: none; }
+.qin-label .zh { font-size: 13px; letter-spacing: 0.3em; color: var(--ink-2); }
+
+/* Sections */
+section.band { border-bottom: 1px solid var(--rule); }
+section.band > .wrap { padding-block: 80px; }
+@media (min-width: 960px) { section.band > .wrap { padding-block: 112px; } }
+.sec-head { display: grid; gap: 10px; margin-bottom: 48px; }
+@media (min-width: 820px) { .sec-head { grid-template-columns: 1fr auto; align-items: end; border-bottom: 1px solid var(--rule); padding-bottom: 20px; } }
+.sec-head h2 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(40px, 6vw, 60px); line-height: 1; display: flex; align-items: baseline; gap: 16px; }
+.sec-head h2 .zh { font-size: 0.42em; color: var(--ink-3); font-weight: 300; letter-spacing: 0.2em; }
+.sec-head p { margin: 0; color: var(--ink-2); max-width: 34em; font-size: 14px; }
+
+/* Works */
+.work { display: grid; gap: 28px; }
+@media (min-width: 960px) { .work { grid-template-columns: 7fr 5fr; gap: 56px; align-items: start; } }
+.work + .work { margin-top: 80px; padding-top: 48px; border-top: 1px solid var(--rule); }
+.work-media { position: relative; display: block; overflow: hidden; background: var(--paper-2); aspect-ratio: 1600 / 1024; max-width: 100%; text-decoration: none; }
+.work-media iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; display: block; }
+.work-media img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform 1.2s cubic-bezier(.16,1,.3,1), filter .6s; filter: saturate(0.9); }
+.work-media:hover img { transform: scale(1.025); filter: saturate(1); }
+.play { position: absolute; left: 16px; bottom: 16px; display: inline-flex; align-items: center; gap: 10px; padding: 8px 14px 8px 8px; background: rgba(18,18,17,.72); color: #ECEBE6; backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); font-family: var(--f-mono); font-size: 10.5px; letter-spacing: 0.14em; text-transform: uppercase; }
+.play i { width: 28px; height: 28px; border-radius: 50%; border: 1px solid rgba(236,235,230,.6); display: grid; place-items: center; font-style: normal; font-size: 10px; padding-left: 2px; }
+.work-media:hover .play i { background: #DE4C38; border-color: #DE4C38; }
+.work-text { display: grid; gap: 18px; min-width: 0; }
+.work-no { display: flex; align-items: center; gap: 12px; }
+.work-text h3 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(44px, 6vw, 64px); line-height: 0.95; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.work-text h3 .seal { font-size: 26px; padding: 6px 7px; border-width: 2px; }
+.work-sub { font-family: var(--f-display); font-style: italic; font-size: 21px; color: var(--ink-2); margin: -6px 0 0; }
+.work-desc { margin: 0; color: var(--ink-2); font-size: 14.5px; max-width: 34em; }
+.work-meta { margin: 0; display: grid; grid-template-columns: max-content 1fr; border-top: 1px solid var(--rule); }
+.work-meta dt, .work-meta dd { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--rule); }
+.work-meta dt { padding-right: 24px; }
+.work-meta dd { font-size: 13.5px; color: var(--ink); }
+.work-meta dd a { text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
+.work-meta dd a:hover { border-color: var(--seal); color: var(--seal); }
+.archive-note { margin-top: 56px; display: flex; align-items: center; gap: 12px; }
+.archive-note::before { content: ""; width: 32px; height: 1px; background: var(--rule-strong); }
+
+/* Practice — five threads */
+.threads { display: grid; grid-template-columns: 1fr; border-top: 1px solid var(--rule); }
+@media (min-width: 640px) { .threads { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1000px) { .threads { grid-template-columns: repeat(5, 1fr); border-top: 0; } }
+.thread { display: grid; grid-template-columns: auto 1fr; gap: 6px 20px; padding: 24px 0; border-bottom: 1px solid var(--rule); min-width: 0; }
+@media (min-width: 1000px) {
+  .thread { grid-template-columns: 1fr; padding: 0 22px 8px; border-bottom: 0; border-left: 1px solid var(--rule); gap: 14px; }
+  .thread:first-child { border-left: 0; padding-left: 0; }
+}
+.thread .char { grid-row: span 3; font-family: var(--f-zh); font-weight: 200; font-size: 64px; line-height: 1; color: var(--ink); transition: color .3s; }
+@media (min-width: 1000px) { .thread .char { grid-row: auto; font-size: 88px; } }
+.thread:hover .char { color: var(--seal); }
+.thread .name { font-family: var(--f-display); font-size: 21px; font-weight: 400; line-height: 1.1; }
+.thread p { margin: 0; font-size: 13.5px; color: var(--ink-2); }
+
+/* Studio */
+.studio { display: grid; gap: 40px; }
+@media (min-width: 960px) { .studio { grid-template-columns: 7fr 4fr; gap: 72px; } }
+.studio-text { display: grid; gap: 20px; max-width: 36em; min-width: 0; }
+.studio-text .big { font-family: var(--f-display); font-size: clamp(24px, 3vw, 30px); line-height: 1.35; font-weight: 300; margin: 0; color: var(--ink); text-wrap: pretty; }
+.studio-text p { margin: 0; color: var(--ink-2); }
+.facts { display: grid; gap: 0; align-content: start; border-top: 1px solid var(--rule); min-width: 0; }
+.fact { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
+.fact .val { font-size: 14.5px; color: var(--ink); }
+.fact .val a { text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
+.fact .val a:hover { border-color: var(--seal); color: var(--seal); }
+.mail { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; }
+.mail code { font-family: var(--f-mono); font-size: 13px; user-select: all; }
+.copy { font-family: var(--f-mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; border: 1px solid var(--rule-strong); padding: 3px 9px; border-radius: 999px; color: var(--ink-2); }
+.copy:hover { color: var(--ink); border-color: var(--ink-3); }
+.links { display: flex; gap: 18px; flex-wrap: wrap; }
+
+/* Footer */
+footer .wrap { padding-block: 72px 56px; display: grid; gap: 40px; }
+.colophon { display: flex; justify-content: space-between; align-items: flex-end; gap: 32px; flex-wrap: wrap; }
+.quote { display: flex; gap: 20px; align-items: flex-start; }
+.quote .v { writing-mode: vertical-rl; font-family: var(--f-zh); font-weight: 300; font-size: 20px; letter-spacing: 0.4em; color: var(--ink); line-height: 1.6; }
+.quote .t { max-width: 22em; display: grid; gap: 8px; padding-top: 4px; }
+.quote .t span:first-child { font-family: var(--f-display); font-style: italic; font-size: 19px; color: var(--ink-2); line-height: 1.4; }
+html[lang="zh-CN"] .quote .v { display: none; }
+html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-style: normal; font-weight: 300; font-size: 20px; letter-spacing: 0.2em; color: var(--ink); }
+.foot-line { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--rule); padding-top: 20px; }
+
+/* Load-in */
+@media (prefers-reduced-motion: no-preference) {
+  .rise { animation: rise 1.1s cubic-bezier(.16,1,.3,1) both; }
+  .rise.d1 { animation-delay: .08s; } .rise.d2 { animation-delay: .18s; } .rise.d3 { animation-delay: .3s; }
+  @keyframes rise { from { opacity: .001; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+}
+</style>
+
+</head>
+<body>
+<div class="grain" aria-hidden="true"></div>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="XŪGU Studio, top">
+      <b>XŪGU</b><span class="seal">虚谷</span>
+    </a>
+    <nav class="mono" aria-label="Sections">
+      <a href="#works" data-i18n="nav_works">Works</a>
+      <a href="#practice" data-i18n="nav_practice">Inspiration</a>
+      <a href="#studio" data-i18n="nav_studio">Studio</a>
+    </nav>
+    <div class="controls">
+      <div class="langs" role="group" aria-label="Language">
+        <button id="lang-en" data-lang="en" aria-pressed="true">EN</button>
+        <button id="lang-fr" data-lang="fr" aria-pressed="false">FR</button>
+        <button id="lang-zh" data-lang="zh" aria-pressed="false">中</button>
+      </div>
+      <button class="icon-btn" id="theme-btn" aria-label="Switch light or dark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero">
+    <div class="wrap">
+      <div class="hero-grid">
+        <div style="display:grid;gap:32px;min-width:0">
+          <div class="mark rise d1">
+            <h1>XŪGU<small>STUDIO</small></h1>
+            <span class="seal seal--v" aria-label="虚谷, empty valley">虚谷</span>
+          </div>
+          <div class="lede rise d2">
+            <p class="kicker" data-i18n="kicker">Art and technology for sound, image and the body.</p>
+            <p data-i18n="lede">Audio-visual interactive works with wearables, drawing on Daoist thought, folk song, ritual and Chinese medicine.</p>
+            <div class="cta">
+              <a class="btn btn--solid" href="#works" data-i18n="cta_works">See the works ↓</a>
+              <a class="btn btn--line" href="#studio" data-i18n="cta_contact">Contact</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="qin rise d3">
+          <div class="qin-label"><span class="zh">七弦 · 十三徽</span></div>
+          <canvas id="qin" aria-label="Seven-string qin. Move the pointer across the strings to play." role="img"></canvas>
+          <div class="qin-foot">
+            <span class="hint" data-i18n="qin_hint">Sweep across the strings to play.</span>
+            <button class="sound-btn" id="sound-btn" aria-pressed="false"><span class="dot"></span><span data-i18n="sound_off">Sound off</span></button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="band" id="works">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span data-i18n="works_title">Works</span></h2>
+      </div>
+      <div id="work-list"></div>
+    </div>
+  </section>
+
+  <section class="band" id="practice">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span data-i18n="practice_title">Inspiration</span></h2>
+      </div>
+      <div class="threads" id="threads"></div>
+    </div>
+  </section>
+
+  <section class="band" id="studio">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2><span>XŪGU</span><span class="seal" style="font-size:22px;padding:6px 7px;border-width:2px;align-self:center">虚谷</span></h2>
+      </div>
+      <div class="studio">
+        <div class="studio-text">
+          <p class="big" data-i18n="studio_p1">虚谷 means empty valley: low and open, so it receives and resonates. Make room first, then let sound, image and body fill it.</p>
+        </div>
+        <div class="facts">
+          <div class="fact">
+            <span class="mono" data-i18n="f_founder">Founder</span>
+            <span class="val">Ziyue Piao</span>
+            <span class="links mono" style="letter-spacing:.1em">
+              <a href="https://piaoziyue.github.io/" target="_blank" rel="noopener noreferrer">Portfolio ↗</a>
+              <a href="https://www.linkedin.com/in/ziyue-monica-piao-312924216/" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
+            </span>
+          </div>
+          <div class="fact">
+            <span class="mono" data-i18n="f_contact">Contact</span>
+            <span class="val mail"><code id="mail">ziyue.piao@mail.mcgill.ca</code><button class="copy" id="copy-btn" data-i18n="copy">Copy</button></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="colophon">
+      <div class="quote">
+        <span class="v">大音希声<br>大象无形</span>
+        <span class="t">
+          <span data-i18n="quote">Great sound is near silence. Great image is beyond form.</span>
+          <span class="mono" data-i18n="quote_src">Dao De Jing · 41</span>
+        </span>
+      </div>
+      <span class="seal seal--solid" style="font-size:18px;padding:8px 9px">虚谷</span>
+    </div>
+    <div class="foot-line mono">
+      <span>© 2026 XŪGU STUDIO</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function () {
+  'use strict';
+
+  /* ---------------- Content: add new works here ---------------- */
+  var WORKS = [
+    {
+      no: '01',
+      year: '2020',
+      title: { en: 'Dao', fr: 'Dao', zh: '道' },
+      seal: '道',
+      subtitle: { en: 'A Laptop Orchestra Performance', fr: 'Performance pour orchestre d’ordinateurs', zh: '笔记本电脑乐团演出' },
+      type: { en: 'Performance', fr: 'Performance', zh: '演出' },
+      image: 'images/dao.jpg',
+      alt: 'Four performers at a long table with laptops and tablets, in front of a deep red wall with white Chinese calligraphy.',
+      video: 'https://youtu.be/srSfYNQEwgs',
+      youtube: 'srSfYNQEwgs',
+      desc: {
+        en: 'A laptop orchestra piece that imitates the sounds of nature, from wind to storm, inspired by 五行, the Five Phases.',
+        fr: 'Une pièce pour orchestre d’ordinateurs qui imite les sons de la nature, du vent à l’orage, inspirée des 五行, les Cinq Phases.',
+        zh: '一部笔记本电脑乐团作品，模拟风、暴雨等自然之声，灵感源自五行。'
+      },
+      meta: [
+        { k: 'm_ensemble', v: { en: 'Four performers', fr: 'Quatre interprètes', zh: '四位演奏者' } },
+        { k: 'm_medium', v: { en: 'Laptops, tablets, live electronics', fr: 'Ordinateurs, tablettes, électronique en direct', zh: '笔记本电脑、平板、现场电子' } }
+      ]
+    }
+  ];
+
+  var THREADS = [
+    { c: '道', py: 'dào', name: { en: 'Way', fr: 'Voie', zh: '道法' },
+      d: { en: 'Emptiness, flow and return.', fr: 'Vide, flux et retour.', zh: '虚空、流动与复归。' } },
+    { c: '身', py: 'shēn', name: { en: 'Body', fr: 'Corps', zh: '身体' },
+      d: { en: 'Breath, gesture and pulse.', fr: 'Souffle, geste et pouls.', zh: '呼吸、姿态与脉搏。' } },
+    { c: '歌', py: 'gē', name: { en: 'Folk song', fr: 'Chant populaire', zh: '民歌' },
+      d: { en: 'Modes, voices and oral tradition.', fr: 'Modes, voix et tradition orale.', zh: '调式、嗓音与口传。' } },
+    { c: '祀', py: 'sì', name: { en: 'Rite', fr: 'Rite', zh: '宗教' },
+      d: { en: 'Gathering, attention and time.', fr: 'Rassemblement, attention et temps.', zh: '聚集、专注与时间。' } },
+    { c: '医', py: 'yī', name: { en: 'Medicine', fr: 'Médecine', zh: '中医' },
+      d: { en: 'Meridians, qi and pulse.', fr: 'Méridiens, qi et pouls.', zh: '经络、气与脉。' } }
+  ];
+
+  var I18N = {
+    en: {
+      nav_works: 'Works', nav_practice: 'Inspiration', nav_studio: 'Studio',
+      meta_left: 'Art & Technology · Audio-Visual · Wearables',
+      kicker: 'Art and technology for sound, image and the body.',
+      lede: 'Audio-visual interactive works with wearables, drawing on Daoist thought, folk song, ritual and Chinese medicine.',
+      cta_works: 'See the works ↓', cta_contact: 'Contact',
+      qin_hint: 'Sweep across the strings to play.',
+      sound_off: 'Sound off', sound_on: 'Sound on',
+      works_title: 'Works', works_sub: 'Performances, installations and instruments. The archive grows as new works are made.',
+      archive_note: 'More works in preparation', watch: 'Watch on YouTube', play: 'Play',
+      m_year: 'Year', m_ensemble: 'Ensemble', m_medium: 'Medium', m_video: 'Video',
+      practice_title: 'Inspiration', practice_sub: 'Five threads run through the studio’s work.',
+      studio_title: 'Studio', studio_sub: 'Xū gǔ · empty valley',
+      studio_p1: '虚谷 means empty valley: low and open, so it receives and resonates. Make room first, then let sound, image and body fill it.',
+      studio_p2: 'XŪGU builds audio-visual interactive artworks with wearable sensors, live electronics and the performing body, and treats Chinese traditional thought as a working source for form and method.',
+      f_founder: 'Founder', f_location: 'Location', f_location_val: 'Montréal, Canada', f_contact: 'Contact',
+      f_contact_note: 'Commissions · Collaborations · Performances', copy: 'Copy', copied: 'Copied',
+      quote: 'Great sound is near silence. Great image is beyond form.', quote_src: 'Dao De Jing · 41',
+      foot_right: 'Montréal · Art & Technology'
+    },
+    fr: {
+      nav_works: 'Œuvres', nav_practice: 'Inspirations', nav_studio: 'Studio',
+      meta_left: 'Art & technologie · Audiovisuel · Dispositifs portés',
+      kicker: 'Art et technologie pour le son, l’image et le corps.',
+      lede: 'Œuvres audiovisuelles interactives avec capteurs portés, nourries de pensée taoïste, de chant populaire, de rituel et de médecine chinoise.',
+      cta_works: 'Voir les œuvres ↓', cta_contact: 'Contact',
+      qin_hint: 'Balayez les cordes pour jouer.',
+      sound_off: 'Son coupé', sound_on: 'Son activé',
+      works_title: 'Œuvres', works_sub: 'Performances, installations et instruments. L’archive s’enrichit au fil des créations.',
+      archive_note: 'D’autres œuvres en préparation', watch: 'Voir sur YouTube', play: 'Lire',
+      m_year: 'Année', m_ensemble: 'Ensemble', m_medium: 'Médium', m_video: 'Vidéo',
+      practice_title: 'Inspirations', practice_sub: 'Cinq fils traversent le travail du studio.',
+      studio_title: 'Studio', studio_sub: 'Xū gǔ · vallée vide',
+      studio_p1: '虚谷 signifie « vallée vide » : basse et ouverte, elle reçoit et résonne. D’abord faire de la place, puis laisser le son, l’image et le corps l’habiter.',
+      studio_p2: 'XŪGU crée des œuvres audiovisuelles interactives avec des capteurs portés, l’électronique en direct et le corps du performeur, et puise dans la pensée traditionnelle chinoise ses formes et ses méthodes de travail.',
+      f_founder: 'Fondatrice', f_location: 'Lieu', f_location_val: 'Montréal, Canada', f_contact: 'Contact',
+      f_contact_note: 'Commandes · Collaborations · Performances', copy: 'Copier', copied: 'Copié',
+      quote: 'Le grand son est à peine audible. La grande image n’a pas de forme.', quote_src: 'Dao De Jing · 41',
+      foot_right: 'Montréal · Art & technologie'
+    },
+    zh: {
+      nav_works: '作品', nav_practice: '灵感', nav_studio: '工作室',
+      meta_left: '艺术与科技 · 视听 · 可穿戴',
+      kicker: '关于声音、影像与身体的艺术与科技。',
+      lede: '以可穿戴设备创作视听互动作品，取法道家、民歌、宗教仪式与中医。',
+      cta_works: '浏览作品 ↓', cta_contact: '联系',
+      qin_hint: '划过琴弦即可弹奏。',
+      sound_off: '声音 · 关', sound_on: '声音 · 开',
+      works_title: '作品', works_sub: '演出、装置与乐器。作品档案随创作持续更新。',
+      archive_note: '更多作品筹备中', watch: '在 YouTube 观看', play: '播放',
+      m_year: '年份', m_ensemble: '编制', m_medium: '媒介', m_video: '影像',
+      practice_title: '灵感', practice_sub: '工作室的创作贯穿五条线索。',
+      studio_title: '工作室', studio_sub: 'Xū gǔ · 虚怀若谷',
+      studio_p1: '虚谷，取「虚怀若谷」之意：低而空，故能容、能应。先留出空间，再让声音、影像与身体充盈其中。',
+      studio_p2: 'XŪGU 以可穿戴传感器、现场电子与表演者的身体创作视听互动作品，并把中国传统思想作为形式与方法的来源。',
+      f_founder: '创办人', f_location: '所在地', f_location_val: '加拿大 · 蒙特利尔', f_contact: '联系',
+      f_contact_note: '委约 · 合作 · 演出', copy: '复制', copied: '已复制',
+      quote: '大音希声，大象无形。', quote_src: '《道德经》第四十一章',
+      foot_right: '蒙特利尔 · 艺术与科技'
+    }
+  };
+
+  function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return null; } }
+
+  var lang = store('xugu_lang') || 'en';
+  if (!I18N[lang]) lang = 'en';
+  var soundOn = false;
+
+  function esc(s) { return String(s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+
+  /* ---------------- Render works & threads ---------------- */
+  function renderWorks() {
+    var t = I18N[lang];
+    document.getElementById('work-list').innerHTML = WORKS.map(function (w) {
+      var meta = w.meta.map(function (m) { return '<dt class="mono">' + esc(t[m.k]) + '</dt><dd>' + esc(m.v[lang]) + '</dd>'; }).join('');
+      if (w.year) meta = '<dt class="mono">' + esc(t.m_year) + '</dt><dd>' + esc(w.year) + '</dd>' + meta;
+      if (w.video) meta += '<dt class="mono">' + esc(t.m_video) + '</dt><dd><a href="' + esc(w.video) + '" target="_blank" rel="noopener noreferrer">' + esc(t.watch) + ' ↗</a></dd>';
+      var media = playing[w.no] && w.youtube
+        ? '<div class="work-media"><iframe src="https://www.youtube-nocookie.com/embed/' + esc(w.youtube) + '?autoplay=1&rel=0&modestbranding=1" title="' + esc(w.title.en + ' — ' + w.subtitle.en) + '" allow="autoplay; encrypted-media; picture-in-picture; fullscreen" allowfullscreen></iframe></div>'
+        : null;
+      return '<article class="work">' + (media ||
+        ('<a class="work-media" data-no="' + esc(w.no) + '" href="' + esc(w.video || '#') + '" target="_blank" rel="noopener noreferrer" aria-label="' + esc(t.watch + ': ' + w.title.en) + '">' +
+          '<img src="' + w.image + '" alt="' + esc(w.alt) + '" loading="lazy" width="1600" height="1024">' +
+          (w.video ? '<span class="play"><i>▶</i>' + esc(t.play) + ' · YouTube</span>' : '') +
+        '</a>')) +
+        '<div class="work-text">' +
+          '<div class="work-no mono"><span>' + esc(w.type[lang]) + '</span>' + (w.year ? '<span>·</span><span>' + esc(w.year) + '</span>' : '') + '</div>' +
+          '<h3>' + esc(w.title[lang === 'zh' ? 'en' : lang]) + '<span class="seal">' + esc(w.seal) + '</span></h3>' +
+          '<p class="work-sub">' + esc(w.subtitle[lang]) + '</p>' +
+          '<p class="work-desc">' + esc(w.desc[lang]) + '</p>' +
+          '<dl class="work-meta">' + meta + '</dl>' +
+        '</div></article>';
+    }).join('');
+  }
+
+  // Play videos in place. Embedded players only work when the site is hosted on its own
+  // (e.g. GitHub Pages); inside a framed preview the poster falls back to opening YouTube.
+  var playing = {};
+  var canEmbed = (function () { try { return window.self === window.top; } catch (e) { return false; } })();
+  document.getElementById('work-list').addEventListener('click', function (e) {
+    var a = e.target.closest('a.work-media[data-no]');
+    if (!a || !canEmbed) return;
+    var w = WORKS.filter(function (x) { return x.no === a.dataset.no; })[0];
+    if (!w || !w.youtube) return;
+    e.preventDefault();
+    playing[w.no] = true;
+    renderWorks();
+  });
+
+  function renderThreads() {
+    document.getElementById('threads').innerHTML = THREADS.map(function (th) {
+      return '<div class="thread"><span class="char" aria-hidden="true">' + th.c + '</span>' +
+        '<span class="mono">' + th.py + '</span>' +
+        '<span class="name">' + esc(th.name[lang]) + '</span>' +
+        '<p>' + esc(th.d[lang]) + '</p></div>';
+    }).join('');
+  }
+
+  function setLang(l) {
+    lang = I18N[l] ? l : 'en';
+    store('xugu_lang', lang);
+    document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
+    var t = I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach(function (el) {
+      var k = el.getAttribute('data-i18n');
+      if (k === 'sound_off') k = soundOn ? 'sound_on' : 'sound_off';
+      if (t[k] !== undefined) el.textContent = t[k];
+    });
+    document.querySelectorAll('.langs button').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
+    renderWorks(); renderThreads();
+  }
+  document.querySelectorAll('.langs button').forEach(function (b) { b.addEventListener('click', function () { setLang(b.dataset.lang); }); });
+
+  /* ---------------- Theme ---------------- */
+  var mq = window.matchMedia('(prefers-color-scheme: dark)');
+  var savedTheme = store('xugu_theme');
+  if (savedTheme === 'dark' || savedTheme === 'light') document.documentElement.setAttribute('data-theme', savedTheme);
+  function isDark() { var a = document.documentElement.getAttribute('data-theme'); return a ? a === 'dark' : mq.matches; }
+  document.getElementById('theme-btn').addEventListener('click', function () {
+    var next = isDark() ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', next); store('xugu_theme', next); readColors();
+  });
+  if (mq.addEventListener) mq.addEventListener('change', function () { readColors(); });
+
+  /* ---------------- Copy email ---------------- */
+  var copyBtn = document.getElementById('copy-btn');
+  copyBtn.addEventListener('click', function () {
+    var txt = document.getElementById('mail').textContent;
+    function done() { copyBtn.textContent = I18N[lang].copied; setTimeout(function () { copyBtn.textContent = I18N[lang].copy; }, 1600); }
+    function fallback() { var r = document.createRange(); r.selectNodeContents(document.getElementById('mail')); var s = getSelection(); s.removeAllRanges(); s.addRange(r); }
+    try { navigator.clipboard.writeText(txt).then(done, fallback); } catch (e) { fallback(); }
+  });
+
+  /* ---------------- The qin: seven strings, thirteen hui ---------------- */
+  var canvas = document.getElementById('qin');
+  var ctx = canvas.getContext('2d');
+  var W = 0, H = 0, dpr = 1;
+  var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var C = {};
+  function readColors() {
+    var cs = getComputedStyle(document.documentElement);
+    ['--ink', '--ink-3', '--seal', '--jade', '--clay', '--rule'].forEach(function (k) { C[k] = cs.getPropertyValue(k).trim(); });
+  }
+  readColors();
+
+  // Standard guqin tuning (正调), raised an octave: C D F G A c d
+  var FREQ = [130.81, 146.83, 174.61, 196.00, 220.00, 261.63, 293.66];
+  // Hui positions as fractions of the sounding length, with the harmonic they give
+  var HUI = [[1/8,8],[1/6,6],[1/5,5],[1/4,4],[1/3,3],[2/5,5],[1/2,2],[3/5,5],[2/3,3],[3/4,4],[4/5,5],[5/6,6],[7/8,8]];
+  var strings = FREQ.map(function (f, i) { return { f: f, i: i, plucks: [], last: 0 }; });
+  var huiFlash = HUI.map(function () { return 0; });
+
+  function geom() {
+    var x0 = W * 0.04, x1 = W * 0.96;
+    var top = H * 0.16, bot = H * 0.78;
+    return { x0: x0, x1: x1, top: top, bot: bot };
+  }
+  // String i baseline y at position x (strings converge slightly toward the left, like the qin's tail)
+  function baseY(i, x, g) {
+    var u = (x - g.x0) / (g.x1 - g.x0);
+    var mid = (g.top + g.bot) / 2;
+    var spread = (g.bot - g.top) / 2 * (0.78 + 0.22 * u);
+    return mid + (i / 6 * 2 - 1) * spread;
+  }
+
+  function resize() {
+    var r = canvas.getBoundingClientRect();
+    dpr = Math.min(window.devicePixelRatio || 1, 2);
+    W = r.width; H = r.height;
+    canvas.width = Math.round(W * dpr); canvas.height = Math.round(H * dpr);
+  }
+  window.addEventListener('resize', resize);
+  resize();
+
+  function pluck(i, x, amp, silent) {
+    var s = strings[i], now = performance.now();
+    if (now - s.last < 70) return;
+    s.last = now;
+    var g = geom();
+    var u = Math.min(0.97, Math.max(0.03, (x - g.x0) / (g.x1 - g.x0)));
+    // Measure from the right (the 岳山 end, where the right hand plays)
+    var fromHead = 1 - u, harm = 0, hIdx = -1;
+    for (var k = 0; k < HUI.length; k++) { if (Math.abs(fromHead - HUI[k][0]) < 0.014) { harm = HUI[k][1]; hIdx = k; break; } }
+    if (hIdx >= 0) huiFlash[hIdx] = 1;
+    s.plucks.push({ u: u, a: amp, t0: now, harm: harm });
+    if (s.plucks.length > 4) s.plucks.shift();
+    if (!silent && soundOn) playNote(i, u, amp, harm);
+  }
+
+  function displacement(s, u, now) {
+    var y = 0;
+    for (var p = s.plucks.length - 1; p >= 0; p--) {
+      var pl = s.plucks[p], dt = (now - pl.t0) / 1000;
+      var env = Math.exp(-dt / (pl.harm ? 2.2 : 1.3));
+      if (env < 0.01) { s.plucks.splice(p, 1); continue; }
+      var shape, vf;
+      if (pl.harm) { shape = Math.sin(Math.PI * pl.harm * u); vf = 9 + s.i * 0.4; }
+      else { shape = u < pl.u ? u / pl.u : (1 - u) / (1 - pl.u); vf = 5 + s.i * 0.7; }
+      y += pl.a * env * shape * Math.sin(2 * Math.PI * vf * dt);
+    }
+    return y;
+  }
+
+  function draw(now) {
+    var g = geom();
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    var breath = reduce ? 0 : Math.sin(now / 1000 * 2 * Math.PI * 0.1); // 0.1 Hz, six breaths a minute
+
+    // Bridges: 岳山 (right) and 龙龈 (left)
+    ctx.strokeStyle = C['--ink-3']; ctx.globalAlpha = 0.5; ctx.lineWidth = 1;
+    [g.x0, g.x1].forEach(function (bx) { ctx.beginPath(); ctx.moveTo(bx, baseY(0, bx, g) - 10); ctx.lineTo(bx, baseY(6, bx, g) + 10); ctx.stroke(); });
+    ctx.globalAlpha = 1;
+
+    // Strings
+    var N = 140;
+    strings.forEach(function (s) {
+      var active = s.plucks.length > 0;
+      var energy = 0;
+      s.plucks.forEach(function (p) { energy = Math.max(energy, p.a * Math.exp(-(now - p.t0) / 1300) / 18); });
+      ctx.beginPath();
+      for (var n = 0; n <= N; n++) {
+        var u = n / N, x = g.x0 + u * (g.x1 - g.x0);
+        var y = baseY(s.i, x, g) + breath * 0.9 * Math.sin(Math.PI * u) + (active ? displacement(s, u, now) : 0);
+        if (n === 0) ctx.moveTo(x, y); else ctx.lineTo(x, y);
+      }
+      ctx.lineWidth = 1.7 - s.i * 0.15;
+      ctx.strokeStyle = C['--ink'];
+      ctx.globalAlpha = 0.62;
+      ctx.stroke();
+      if (energy > 0.02) {
+        ctx.strokeStyle = C['--seal']; ctx.globalAlpha = Math.min(0.9, energy); ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+    });
+
+    // Thirteen hui, inlaid along the near edge
+    var hy = g.bot + (H - g.bot) * 0.42;
+    HUI.forEach(function (h, k) {
+      var x = g.x1 - h[0] * (g.x1 - g.x0);
+      var big = k === 6;
+      huiFlash[k] *= 0.94;
+      ctx.beginPath(); ctx.arc(x, hy, big ? 3.4 : 2.4, 0, Math.PI * 2);
+      ctx.fillStyle = C['--clay']; ctx.globalAlpha = 0.85; ctx.fill();
+      if (huiFlash[k] > 0.02) {
+        ctx.beginPath(); ctx.arc(x, hy, 3 + (1 - huiFlash[k]) * 14, 0, Math.PI * 2);
+        ctx.strokeStyle = C['--seal']; ctx.globalAlpha = huiFlash[k] * 0.8; ctx.lineWidth = 1; ctx.stroke();
+      }
+      ctx.globalAlpha = 1;
+    });
+
+    // String numbers, right margin (一 … 七; string one is the lowest)
+    ctx.font = '300 11px "Noto Serif SC", serif'; ctx.fillStyle = C['--ink-3']; ctx.textAlign = 'right'; ctx.textBaseline = 'middle';
+    '一二三四五六七'.split('').forEach(function (ch, i) { ctx.fillText(ch, W - 2, baseY(i, g.x1, g)); });
+
+    requestAnimationFrame(draw);
+  }
+  requestAnimationFrame(draw);
+
+  // Pointer: crossing a string plucks it; a tap near a string plucks it too
+  var prev = null;
+  function local(e) { var r = canvas.getBoundingClientRect(); return { x: e.clientX - r.left, y: e.clientY - r.top, t: performance.now() }; }
+  canvas.addEventListener('pointermove', function (e) {
+    var p = local(e), g = geom();
+    if (prev && p.x > g.x0 && p.x < g.x1) {
+      for (var i = 0; i < 7; i++) {
+        var sy = baseY(i, p.x, g);
+        if ((prev.y - sy) * (p.y - sy) <= 0 && prev.y !== p.y) {
+          var v = Math.abs(p.y - prev.y) / Math.max(8, p.t - prev.t) * 16;
+          pluck(i, p.x, Math.min(16, 4 + v * 2));
+        }
+      }
+    }
+    prev = p;
+  });
+  canvas.addEventListener('pointerleave', function () { prev = null; });
+  canvas.addEventListener('pointerdown', function (e) {
+    var p = local(e), g = geom(), best = -1, bd = 1e9;
+    for (var i = 0; i < 7; i++) { var d = Math.abs(baseY(i, p.x, g) - p.y); if (d < bd) { bd = d; best = i; } }
+    if (bd < 18 && p.x > g.x0 && p.x < g.x1) pluck(best, p.x, 11);
+    prev = p;
+  });
+
+  // Idle: the instrument plays itself, silently, now and then
+  if (!reduce) {
+    var idle = function () {
+      var g = geom();
+      pluck(Math.floor(Math.random() * 7), g.x0 + (0.15 + Math.random() * 0.7) * (g.x1 - g.x0), 5 + Math.random() * 5, true);
+      setTimeout(idle, 2200 + Math.random() * 3200);
+    };
+    setTimeout(idle, 900);
+  }
+
+  /* ---------------- Sound: Karplus-Strong strings into an empty-valley echo ---------------- */
+  var ac = null, out = null, buffers = [];
+  function makeString(freq) {
+    var sr = ac.sampleRate, len = Math.floor(sr * 3.2), buf = ac.createBuffer(1, len, sr), d = buf.getChannelData(0);
+    var P = Math.max(2, Math.round(sr / freq)), line = new Float32Array(P), prevN = 0;
+    for (var i = 0; i < P; i++) { var n = Math.random() * 2 - 1; line[i] = (n + prevN) * 0.5; prevN = n; }
+    var idx = 0;
+    for (var j = 0; j < len; j++) {
+      var a = line[idx], b = line[(idx + 1) % P];
+      d[j] = a;
+      line[idx] = 0.4985 * (a + b);
+      idx = (idx + 1) % P;
+    }
+    var fade = Math.floor(sr * 0.2);
+    for (var f = 0; f < fade; f++) d[len - 1 - f] *= f / fade;
+    return buf;
+  }
+  function initAudio() {
+    var AC = window.AudioContext || window.webkitAudioContext;
+    if (!AC) return false;
+    ac = new AC();
+    out = ac.createGain(); out.gain.value = 0.55;
+    var lp = ac.createBiquadFilter(); lp.type = 'lowpass'; lp.frequency.value = 3200;
+    var delay = ac.createDelay(1.5); delay.delayTime.value = 0.34;
+    var fb = ac.createGain(); fb.gain.value = 0.32;
+    var damp = ac.createBiquadFilter(); damp.type = 'lowpass'; damp.frequency.value = 1400;
+    var wet = ac.createGain(); wet.gain.value = 0.35;
+    out.connect(lp); lp.connect(ac.destination);
+    lp.connect(delay); delay.connect(damp); damp.connect(fb); fb.connect(delay); damp.connect(wet); wet.connect(ac.destination);
+    buffers = FREQ.map(makeString);
+    return true;
+  }
+  function playNote(i, u, amp, harm) {
+    if (!ac) return;
+    var t = ac.currentTime, pan = ac.createStereoPanner ? ac.createStereoPanner() : null;
+    var gN = ac.createGain();
+    if (pan) { pan.pan.value = (u - 0.5) * 1.1; gN.connect(pan); pan.connect(out); } else gN.connect(out);
+    var vel = Math.min(1, amp / 16);
+    if (harm) {
+      // 泛音: a bell-like overtone at the hui's harmonic
+      var o = ac.createOscillator(), o2 = ac.createOscillator(), g2 = ac.createGain();
+      o.type = 'sine'; o.frequency.value = FREQ[i] * harm;
+      o2.type = 'sine'; o2.frequency.value = FREQ[i] * harm * 2.005; g2.gain.value = 0.18;
+      o.connect(gN); o2.connect(g2); g2.connect(gN);
+      gN.gain.setValueAtTime(0, t); gN.gain.linearRampToValueAtTime(0.22 * vel + 0.05, t + 0.006);
+      gN.gain.exponentialRampToValueAtTime(0.0008, t + 2.6);
+      o.start(t); o2.start(t); o.stop(t + 2.7); o2.stop(t + 2.7);
+    } else {
+      var src = ac.createBufferSource(); src.buffer = buffers[i];
+      gN.gain.value = 0.35 * vel + 0.08;
+      src.connect(gN); src.start(t);
+    }
+  }
+  var soundBtn = document.getElementById('sound-btn');
+  soundBtn.addEventListener('click', function () {
+    if (!ac && !initAudio()) return;
+    soundOn = !soundOn;
+    if (soundOn && ac.state === 'suspended') ac.resume();
+    soundBtn.setAttribute('aria-pressed', String(soundOn));
+    soundBtn.querySelector('[data-i18n]').textContent = I18N[lang][soundOn ? 'sound_on' : 'sound_off'];
+    if (soundOn) { var g = geom(); [0, 2, 4, 6].forEach(function (s, k) { setTimeout(function () { pluck(s, g.x0 + 0.62 * (g.x1 - g.x0), 9); }, k * 140); }); }
+  });
+
+  setLang(lang);
+})();
+</script>
+
+</body>
+</html>
