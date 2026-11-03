@@ -7,7 +7,7 @@
 <meta name="description" content="XŪGU STUDIO 虚谷 — art and technology studio. Audio-visual interactive works with wearables and the body, drawing on Daoist thought, folk song, ritual and Chinese medicine.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Noto+Serif+SC:wght@200;300;400;500&family=Hanken+Grotesk:wght@300;400;500&family=JetBrains+Mono:wght@300;400&display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Noto+Serif+SC:wght@200;300;400;500&family=Geist:wght@300;400;500&family=Geist+Mono:wght@400&display=swap">
 <style>
 /* Layout: washi-paper page, wide 留白 margins; hero = wordmark beside a playable seven-string qin; works archive; five threads as single characters. */
 :root {
@@ -23,10 +23,10 @@
   --clay: #B08A62;
   --header-bg: rgba(251, 251, 249, 0.88);
 
-  --f-display: 'Cormorant Garamond', 'Noto Serif SC', 'Songti SC', Georgia, serif;
+  --f-display: 'PT Serif', 'Noto Serif SC', 'Songti SC', Georgia, serif;
   --f-zh: 'Noto Serif SC', 'Songti SC', 'STSong', SimSun, serif;
-  --f-body: 'Hanken Grotesk', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  --f-mono: 'JetBrains Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+  --f-body: 'Geist', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --f-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, monospace;
 
   --max: 1120px;
   --gut: max(16px, env(safe-area-inset-left, 0px));
@@ -91,7 +91,7 @@ header.top {
 }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand b { font-family: var(--f-display); font-weight: 400; font-size: 22px; letter-spacing: 0.18em; }
+.brand b { font-family: var(--f-display); font-weight: 400; font-size: 19px; letter-spacing: 0.16em; }
 .top nav { display: none; gap: 28px; }
 .top nav a { text-decoration: none; transition: color .2s; }
 .top nav a:hover { color: var(--ink); }
@@ -114,12 +114,12 @@ header.top {
 .mark { display: flex; align-items: flex-start; gap: 18px; }
 .mark h1 {
   margin: 0; font-family: var(--f-display); font-weight: 300; line-height: 0.86;
-  font-size: clamp(76px, 15vw, 148px); letter-spacing: -0.01em;
+  font-size: clamp(64px, 12.5vw, 124px); letter-spacing: -0.02em;
 }
 .mark h1 small { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.62em; font-weight: 400; color: var(--ink-2); margin-top: 18px; padding-left: 6px; line-height: 1; }
 .mark .seal--v { font-size: 22px; margin-top: 12px; padding: 9px 6px; border-width: 2px; }
 .lede { max-width: 30em; display: grid; gap: 14px; }
-.lede .kicker { font-family: var(--f-display); font-size: 25px; font-weight: 400; line-height: 1.25; color: var(--ink); margin: 0; text-wrap: balance; }
+.lede .kicker { font-family: var(--f-display); font-size: 22px; font-weight: 400; line-height: 1.25; color: var(--ink); margin: 0; text-wrap: balance; }
 .lede p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
 .cta { display: flex; gap: 12px; flex-wrap: wrap; padding-top: 8px; }
 .btn { font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding: 12px 20px; border: 1px solid var(--ink); transition: background .2s, color .2s, border-color .2s; }
@@ -147,7 +147,7 @@ section.band > .wrap { padding-block: 80px; }
 @media (min-width: 960px) { section.band > .wrap { padding-block: 112px; } }
 .sec-head { display: grid; gap: 10px; margin-bottom: 48px; }
 @media (min-width: 820px) { .sec-head { grid-template-columns: 1fr auto; align-items: end; border-bottom: 1px solid var(--rule); padding-bottom: 20px; } }
-.sec-head h2 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(40px, 6vw, 60px); line-height: 1; display: flex; align-items: baseline; gap: 16px; }
+.sec-head h2 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(34px, 5vw, 50px); line-height: 1.05; display: flex; align-items: baseline; gap: 16px; }
 .sec-head h2 .zh { font-size: 0.42em; color: var(--ink-3); font-weight: 300; letter-spacing: 0.2em; }
 .sec-head p { margin: 0; color: var(--ink-2); max-width: 34em; font-size: 14px; }
 
@@ -164,9 +164,9 @@ section.band > .wrap { padding-block: 80px; }
 .work-media:hover .play i { background: #DE4C38; border-color: #DE4C38; }
 .work-text { display: grid; gap: 18px; min-width: 0; }
 .work-no { display: flex; align-items: center; gap: 12px; }
-.work-text h3 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(44px, 6vw, 64px); line-height: 0.95; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
+.work-text h3 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(38px, 5vw, 54px); line-height: 1; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .work-text h3 .seal { font-size: 26px; padding: 6px 7px; border-width: 2px; }
-.work-sub { font-family: var(--f-display); font-style: italic; font-size: 21px; color: var(--ink-2); margin: -6px 0 0; }
+.work-sub { font-family: var(--f-display); font-style: italic; font-size: 18px; color: var(--ink-2); margin: -6px 0 0; }
 .work-desc { margin: 0; color: var(--ink-2); font-size: 14.5px; max-width: 34em; }
 .work-meta { margin: 0; display: grid; grid-template-columns: max-content 1fr; border-top: 1px solid var(--rule); }
 .work-meta dt, .work-meta dd { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--rule); }
@@ -189,14 +189,14 @@ section.band > .wrap { padding-block: 80px; }
 .thread .char { grid-row: span 3; font-family: var(--f-zh); font-weight: 200; font-size: 64px; line-height: 1; color: var(--ink); transition: color .3s; }
 @media (min-width: 1000px) { .thread .char { grid-row: auto; font-size: 88px; } }
 .thread:hover .char { color: var(--seal); }
-.thread .name { font-family: var(--f-display); font-size: 21px; font-weight: 400; line-height: 1.1; }
+.thread .name { font-family: var(--f-display); font-size: 18px; font-weight: 400; line-height: 1.1; }
 .thread p { margin: 0; font-size: 13.5px; color: var(--ink-2); }
 
 /* Studio */
 .studio { display: grid; gap: 40px; }
 @media (min-width: 960px) { .studio { grid-template-columns: 7fr 4fr; gap: 72px; } }
 .studio-text { display: grid; gap: 20px; max-width: 36em; min-width: 0; }
-.studio-text .big { font-family: var(--f-display); font-size: clamp(24px, 3vw, 30px); line-height: 1.35; font-weight: 300; margin: 0; color: var(--ink); text-wrap: pretty; }
+.studio-text .big { font-family: var(--f-display); font-size: clamp(21px, 2.6vw, 26px); line-height: 1.35; font-weight: 300; margin: 0; color: var(--ink); text-wrap: pretty; }
 .studio-text p { margin: 0; color: var(--ink-2); }
 .facts { display: grid; gap: 0; align-content: start; border-top: 1px solid var(--rule); min-width: 0; }
 .fact { display: grid; gap: 4px; padding: 16px 0; border-bottom: 1px solid var(--rule); }
@@ -215,7 +215,7 @@ footer .wrap { padding-block: 72px 56px; display: grid; gap: 40px; }
 .quote { display: flex; gap: 20px; align-items: flex-start; }
 .quote .v { writing-mode: vertical-rl; font-family: var(--f-zh); font-weight: 300; font-size: 20px; letter-spacing: 0.4em; color: var(--ink); line-height: 1.6; }
 .quote .t { max-width: 22em; display: grid; gap: 8px; padding-top: 4px; }
-.quote .t span:first-child { font-family: var(--f-display); font-style: italic; font-size: 19px; color: var(--ink-2); line-height: 1.4; }
+.quote .t span:first-child { font-family: var(--f-display); font-style: italic; font-size: 17px; color: var(--ink-2); line-height: 1.4; }
 html[lang="zh-CN"] .quote .v { display: none; }
 html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-style: normal; font-weight: 300; font-size: 20px; letter-spacing: 0.2em; color: var(--ink); }
 .foot-line { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; border-top: 1px solid var(--rule); padding-top: 20px; }
