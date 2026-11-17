@@ -29,11 +29,12 @@ export const portfolioData: Portfolio[] = [
   // },
   {
     // Studio site lives in public/xugu/ and is served at piaoziyue.github.io/xugu/
-    title: "XŪGU Studio · Interactive Artworks",
+    title: "XŪGU Studio",
     description: "",
     projectUrl: "/xugu/",
-    imageUrl: "/assets/img/portfolio/xugu/xugu-cover-light.svg",
-    imageUrlDark: "/assets/img/portfolio/xugu/xugu-cover-dark.svg",
+    // Contrast with the page: dark card in light mode, light card in dark mode
+    imageUrl: "/assets/img/portfolio/xugu/xugu-cover-dark.svg",
+    imageUrlDark: "/assets/img/portfolio/xugu/xugu-cover-light.svg",
   },
   {
     title: "Photography 📷 & Design 🧑‍🎨",
