@@ -2,6 +2,7 @@ export interface Portfolio {
   title: string;
   description: string;
   imageUrl?: string;
+  imageUrlDark?: string; // optional version shown in dark mode
   projectUrl?: string;
 }
 
@@ -31,8 +32,8 @@ export const portfolioData: Portfolio[] = [
     title: "XŪGU Studio · Interactive Artworks",
     description: "",
     projectUrl: "/xugu/",
-    imageUrl:
-      "/assets/img/portfolio/performance/per_dao.png",
+    imageUrl: "/assets/img/portfolio/xugu/xugu-cover-light.svg",
+    imageUrlDark: "/assets/img/portfolio/xugu/xugu-cover-dark.svg",
   },
   {
     title: "Photography 📷 & Design 🧑‍🎨",

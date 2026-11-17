@@ -66,6 +66,9 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   position: fixed; inset: 0; pointer-events: none; z-index: 70; opacity: 0.045; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo--l { display: none; } :root:not([data-theme="light"]) .logo--d { display: block; } }
+:root[data-theme="dark"] .logo--l { display: none; }
+:root[data-theme="dark"] .logo--d { display: block; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .grain { mix-blend-mode: screen; filter: invert(1); opacity: 0.03; } }
 :root[data-theme="dark"] .grain { mix-blend-mode: screen; filter: invert(1); opacity: 0.03; }
 
@@ -92,7 +95,7 @@ header.top {
 }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand b { font-family: var(--f-logo); font-weight: 400; font-size: 22px; letter-spacing: 0.18em; }
+.brand .logo { width: auto; height: 40px; }
 .top nav { display: none; gap: 28px; }
 .top nav a { text-decoration: none; transition: color .2s; }
 .top nav a:hover { color: var(--ink); }
@@ -112,13 +115,10 @@ header.top {
 .hero-meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .hero-grid { display: grid; gap: 36px; align-items: center; }
 @media (min-width: 960px) { .hero-grid { grid-template-columns: 5fr 7fr; gap: 56px; } .hero .wrap { padding-block: 88px 48px; } }
-.mark { display: flex; align-items: flex-start; gap: 18px; }
-.mark h1 {
-  margin: 0; font-family: var(--f-logo); font-weight: 300; line-height: 0.86;
-  font-size: clamp(76px, 15vw, 148px); letter-spacing: -0.01em;
-}
-.mark h1 small { display: block; font-family: var(--f-mono); font-size: 11px; letter-spacing: 0.62em; font-weight: 400; color: var(--ink-2); margin-top: 18px; padding-left: 6px; line-height: 1; }
-.mark .seal--v { font-size: 22px; margin-top: 12px; padding: 9px 6px; border-width: 2px; }
+/* Logo: light-ink version on paper, paper-ink version at night */
+.logo { display: block; width: 100%; height: auto; max-width: 100%; }
+.logo--d { display: none; }
+.mark { margin: 0; width: min(100%, 360px); line-height: 0; }
 .lede { max-width: 30em; display: grid; gap: 14px; }
 .lede .kicker { font-family: var(--f-display); font-size: 22px; font-weight: 400; line-height: 1.25; color: var(--ink); margin: 0; text-wrap: balance; }
 .lede p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
@@ -236,7 +236,8 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top" aria-label="XŪGU Studio, top">
-      <b>XŪGU</b><span class="seal">虚谷</span>
+      <img class="logo logo--l" src="images/xugu-logo-light.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
+      <img class="logo logo--d" src="images/xugu-logo-dark.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
     </a>
     <nav class="mono" aria-label="Sections">
       <a href="#works" data-i18n="nav_works">Works</a>
@@ -261,10 +262,10 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
     <div class="wrap">
       <div class="hero-grid">
         <div style="display:grid;gap:32px;min-width:0">
-          <div class="mark rise d1">
-            <h1>XŪGU<small>STUDIO</small></h1>
-            <span class="seal seal--v" aria-label="虚谷, empty valley">虚谷</span>
-          </div>
+          <h1 class="mark rise d1">
+            <img class="logo logo--l" src="images/xugu-logo-light.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
+            <img class="logo logo--d" src="images/xugu-logo-dark.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
+          </h1>
           <div class="lede rise d2">
             <p class="kicker" data-i18n="kicker">Art and technology for sound, image and the body.</p>
             <div class="cta">
