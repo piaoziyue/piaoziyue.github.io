@@ -12,8 +12,17 @@ export function PortfolioEntry({ portfolio }: { portfolio: Portfolio }) {
             alt={portfolio.title}
             width={200}
             height={200}
-            className="rounded-lg"
+            className={portfolio.imageUrlDark ? "rounded-lg dark:hidden" : "rounded-lg"}
           />
+          {portfolio.imageUrlDark && (
+            <Image
+              src={portfolio.imageUrlDark}
+              alt={portfolio.title}
+              width={200}
+              height={200}
+              className="rounded-lg hidden dark:block"
+            />
+          )}
         </div>
       )}
       <div className="flex flex-col flex-1">
