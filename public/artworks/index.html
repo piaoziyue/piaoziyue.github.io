@@ -170,6 +170,7 @@ section.band > .wrap { padding-block: 80px; }
 .work-meta dt { padding-right: 24px; }
 .work-meta dd { font-size: 13.5px; color: var(--ink); }
 .work-meta dd a { text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
+.work-meta .dd-credit { display: block; margin-top: 4px; font-size: 12.5px; line-height: 1.55; color: var(--ink-3); }
 .work-meta .dd-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 6px; font-size: 12.5px; }
 .work-meta dd a:hover { border-color: var(--seal); color: var(--seal); }
 .archive-note { margin-top: 56px; display: flex; align-items: center; gap: 12px; }
@@ -351,6 +352,36 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 
   /* ---------------- Content: add new works here ---------------- */
   var WORKS = [
+    // [conspire-i]
+    {
+      no: '02',
+      year: '2026',
+      title: { en: 'Conspire I', fr: 'Conspire I', zh: 'Conspire I' },
+      seal: '身',
+      subtitle: { en: 'Embodied Vocal Improvisation', fr: 'Improvisation vocale incarnée', zh: '具身人声即兴' },
+      type: { en: 'Demo', fr: 'Démo', zh: '演示' },
+      image: 'images/conspire-i.jpg',
+      alt: 'A performer wearing headphones and a breath-sensing chest band, beside the SomaSoni interface where an RL agent moves sliders for grain, space and colour.',
+      video: 'https://youtu.be/FO3_tZ7bZKY',
+      youtube: 'FO3_tZ7bZKY',
+      desc: {
+        en: 'Conspire I (2026) is an embodied vocal improvisation demo where extended breath techniques meet a Reinforcement Learning sound agent. Through continuous breath-voice exploration, performer and AI co-negotiate emergent timbres in real time.',
+        fr: 'Conspire I (2026) est une démo d’improvisation vocale incarnée où des techniques de souffle étendues rencontrent un agent sonore à apprentissage par renforcement. Dans une exploration continue du souffle et de la voix, l’interprète et l’IA négocient ensemble des timbres émergents, en temps réel.',
+        zh: 'Conspire I（2026）是一段具身人声即兴演示：扩展呼吸技巧与强化学习声音代理相遇。在持续的呼吸与人声探索中，表演者与 AI 实时共同协商、生成新的音色。'
+      },
+      meta: [
+        { k: 'm_medium', v: { en: 'Voice, breath-sensing garment, RL sound agent', fr: 'Voix, vêtement capteur de respiration, agent sonore RL', zh: '人声、呼吸传感服装、强化学习声音代理' } },
+        { k: 'm_device', v: { en: 'GummiSoma breathing garment (UbiComp/ISWC 2026)', fr: 'Vêtement respiratoire GummiSoma (UbiComp/ISWC 2026)', zh: 'GummiSoma 呼吸传感服装（UbiComp/ISWC 2026）' },
+          credit: { en: 'Co-designed by researchers at McGill University and Yamaha Corporation. Sensor courtesy of Yamaha Corporation.',
+                    fr: 'Conçu conjointement par des chercheurs de l’Université McGill et de Yamaha Corporation. Capteur fourni par Yamaha Corporation.',
+                    zh: '由麦吉尔大学与 Yamaha Corporation（雅马哈株式会社）的研究人员共同设计。传感器由 Yamaha Corporation 提供。' },
+          links: [
+            { label: { en: 'Paper', fr: 'Article', zh: '论文' },
+              href: 'https://www.idmil.org/publication/gummisoma-co-designing-a-carbon-nanotube-strain-sensing-garment-for-respiratory-tracking-in-vocal-performance/' }
+          ] }
+      ]
+    },
+    // [/conspire-i]
     {
       no: '01',
       year: '2020',
@@ -461,7 +492,9 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
     document.getElementById('work-list').innerHTML = WORKS.map(function (w) {
       var meta = w.meta.map(function (m) {
         var links = (m.links || []).map(function (l) { return '<a href="' + esc(l.href) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label[lang]) + ' ↗</a>'; }).join('');
-        return '<dt class="mono">' + esc(t[m.k]) + '</dt><dd>' + esc(m.v[lang]) + (links ? '<span class="dd-links">' + links + '</span>' : '') + '</dd>';
+        return '<dt class="mono">' + esc(t[m.k]) + '</dt><dd>' + esc(m.v[lang]) +
+          (m.credit ? '<span class="dd-credit">' + esc(m.credit[lang]) + '</span>' : '') +
+          (links ? '<span class="dd-links">' + links + '</span>' : '') + '</dd>';
       }).join('');
       if (w.year) meta = '<dt class="mono">' + esc(t.m_year) + '</dt><dd>' + esc(w.year) + '</dd>' + meta;
       if (w.video) meta += '<dt class="mono">' + esc(t.m_video) + '</dt><dd><a href="' + esc(w.video) + '" target="_blank" rel="noopener noreferrer">' + esc(t.watch) + ' ↗</a></dd>';
