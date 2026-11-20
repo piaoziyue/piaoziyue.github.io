@@ -174,6 +174,7 @@ section.band > .wrap { padding-block: 80px; }
 .work-meta dt { padding-right: 24px; }
 .work-meta dd { font-size: 13.5px; color: var(--ink); }
 .work-meta dd a { text-decoration: none; border-bottom: 1px solid var(--rule-strong); }
+.work-meta .dd-links { display: flex; flex-wrap: wrap; gap: 4px 18px; margin-top: 6px; font-size: 12.5px; }
 .work-meta dd a:hover { border-color: var(--seal); color: var(--seal); }
 .archive-note { margin-top: 56px; display: flex; align-items: center; gap: 12px; }
 .archive-note::before { content: ""; width: 32px; height: 1px; background: var(--rule-strong); }
@@ -375,7 +376,13 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
         zh: 'Conspire I（2026）是一段具身人声即兴演示：扩展呼吸技巧与强化学习声音代理相遇。在持续的呼吸与人声探索中，表演者与 AI 实时共同协商、生成新的音色。'
       },
       meta: [
-        { k: 'm_medium', v: { en: 'Voice, wearable breath band, RL sound agent', fr: 'Voix, ceinture respiratoire portée, agent sonore RL', zh: '人声、可穿戴呼吸带、强化学习声音代理' } }
+        { k: 'm_medium', v: { en: 'Voice, breath-sensing garment, RL sound agent', fr: 'Voix, vêtement capteur de respiration, agent sonore RL', zh: '人声、呼吸传感服装、强化学习声音代理' } },
+        { k: 'm_device', v: { en: 'GummiSoma, co-developed with Yamaha', fr: 'GummiSoma, co-développé avec Yamaha', zh: 'GummiSoma，与 Yamaha 合作开发' },
+          links: [
+            { label: { en: 'Paper · UbiComp/ISWC 2026', fr: 'Article · UbiComp/ISWC 2026', zh: '论文 · UbiComp/ISWC 2026' },
+              href: 'https://www.idmil.org/publication/gummisoma-co-designing-a-carbon-nanotube-strain-sensing-garment-for-respiratory-tracking-in-vocal-performance/' },
+            { label: { en: 'Video', fr: 'Vidéo', zh: '视频' }, href: 'https://youtu.be/KVxbNY8ZzHs' }
+          ] }
       ]
     },
     {
@@ -425,7 +432,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
       sound_off: 'Sound off', sound_on: 'Sound on',
       works_title: 'Works', works_sub: 'Performances, installations and instruments. The archive grows as new works are made.',
       archive_note: 'More works in preparation', works_soon: 'More works coming in 2026.', watch: 'Watch on YouTube', play: 'Play',
-      m_year: 'Year', m_ensemble: 'Ensemble', m_medium: 'Medium', m_video: 'Video',
+      m_year: 'Year', m_ensemble: 'Ensemble', m_medium: 'Medium', m_device: 'Device', m_video: 'Video',
       practice_title: 'Inspiration', practice_sub: 'Five threads run through the studio’s work.',
       studio_title: 'Studio', studio_sub: 'Xū gǔ · empty valley',
       studio_p1: '虚谷 means empty valley: low and open, so it receives and resonates. Make room first, then let sound, image and body fill it.',
@@ -445,7 +452,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
       sound_off: 'Son coupé', sound_on: 'Son activé',
       works_title: 'Œuvres', works_sub: 'Performances, installations et instruments. L’archive s’enrichit au fil des créations.',
       archive_note: 'D’autres œuvres en préparation', works_soon: 'D’autres œuvres à venir en 2026.', watch: 'Voir sur YouTube', play: 'Lire',
-      m_year: 'Année', m_ensemble: 'Ensemble', m_medium: 'Médium', m_video: 'Vidéo',
+      m_year: 'Année', m_ensemble: 'Ensemble', m_medium: 'Médium', m_device: 'Dispositif', m_video: 'Vidéo',
       practice_title: 'Inspirations', practice_sub: 'Cinq fils traversent le travail du studio.',
       studio_title: 'Studio', studio_sub: 'Xū gǔ · vallée vide',
       studio_p1: '虚谷 signifie « vallée vide » : basse et ouverte, elle reçoit et résonne. D’abord faire de la place, puis laisser le son, l’image et le corps l’habiter.',
@@ -465,7 +472,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
       sound_off: '声音 · 关', sound_on: '声音 · 开',
       works_title: '作品', works_sub: '演出、装置与乐器。作品档案随创作持续更新。',
       archive_note: '更多作品筹备中', works_soon: '更多作品将于 2026 年推出。', watch: '在 YouTube 观看', play: '播放',
-      m_year: '年份', m_ensemble: '编制', m_medium: '媒介', m_video: '影像',
+      m_year: '年份', m_ensemble: '编制', m_medium: '媒介', m_device: '设备', m_video: '影像',
       practice_title: '灵感', practice_sub: '工作室的创作贯穿五条线索。',
       studio_title: '工作室', studio_sub: 'Xū gǔ · 虚怀若谷',
       studio_p1: '虚谷，取「虚怀若谷」之意：低而空，故能容、能应。先留出空间，再让声音、影像与身体充盈其中。',
@@ -489,7 +496,10 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
   function renderWorks() {
     var t = I18N[lang];
     document.getElementById('work-list').innerHTML = WORKS.map(function (w) {
-      var meta = w.meta.map(function (m) { return '<dt class="mono">' + esc(t[m.k]) + '</dt><dd>' + esc(m.v[lang]) + '</dd>'; }).join('');
+      var meta = w.meta.map(function (m) {
+        var links = (m.links || []).map(function (l) { return '<a href="' + esc(l.href) + '" target="_blank" rel="noopener noreferrer">' + esc(l.label[lang]) + ' ↗</a>'; }).join('');
+        return '<dt class="mono">' + esc(t[m.k]) + '</dt><dd>' + esc(m.v[lang]) + (links ? '<span class="dd-links">' + links + '</span>' : '') + '</dd>';
+      }).join('');
       if (w.year) meta = '<dt class="mono">' + esc(t.m_year) + '</dt><dd>' + esc(w.year) + '</dd>' + meta;
       if (w.video) meta += '<dt class="mono">' + esc(t.m_video) + '</dt><dd><a href="' + esc(w.video) + '" target="_blank" rel="noopener noreferrer">' + esc(t.watch) + ' ↗</a></dd>';
       var media = playing[w.no] && w.youtube
