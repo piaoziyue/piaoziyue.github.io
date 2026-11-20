@@ -168,6 +168,7 @@ section.band > .wrap { padding-block: 80px; }
 .work-text h3 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(38px, 5vw, 54px); line-height: 1; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .work-text h3 .seal { font-size: 26px; padding: 6px 7px; border-width: 2px; }
 .work-sub { font-family: var(--f-display); font-style: italic; font-size: 18px; color: var(--ink-2); margin: -6px 0 0; }
+.work-note { margin: -4px 0 0; letter-spacing: 0.1em; color: var(--seal); }
 .work-desc { margin: 0; color: var(--ink-2); font-size: 14.5px; max-width: 34em; }
 .work-meta { margin: 0; display: grid; grid-template-columns: max-content 1fr; border-top: 1px solid var(--rule); }
 .work-meta dt, .work-meta dd { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--rule); }
@@ -360,32 +361,6 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
   /* ---------------- Content: add new works here ---------------- */
   var WORKS = [
     {
-      no: '02',
-      year: '2026',
-      title: { en: 'Conspire I', fr: 'Conspire I', zh: 'Conspire I' },
-      seal: '身',
-      subtitle: { en: 'Embodied Vocal Improvisation', fr: 'Improvisation vocale incarnée', zh: '具身人声即兴' },
-      type: { en: 'Demo', fr: 'Démo', zh: '演示' },
-      image: 'images/conspire-i.jpg',
-      alt: 'A performer wearing headphones and a breath-sensing chest band, beside the SomaSoni interface where an RL agent moves sliders for grain, space and colour.',
-      video: 'https://youtu.be/FO3_tZ7bZKY',
-      youtube: 'FO3_tZ7bZKY',
-      desc: {
-        en: 'Conspire I (2026) is an embodied vocal improvisation demo where extended breath techniques meet a Reinforcement Learning sound agent. Through continuous breath-voice exploration, performer and AI co-negotiate emergent timbres in real time.',
-        fr: 'Conspire I (2026) est une démo d’improvisation vocale incarnée où des techniques de souffle étendues rencontrent un agent sonore à apprentissage par renforcement. Dans une exploration continue du souffle et de la voix, l’interprète et l’IA négocient ensemble des timbres émergents, en temps réel.',
-        zh: 'Conspire I（2026）是一段具身人声即兴演示：扩展呼吸技巧与强化学习声音代理相遇。在持续的呼吸与人声探索中，表演者与 AI 实时共同协商、生成新的音色。'
-      },
-      meta: [
-        { k: 'm_medium', v: { en: 'Voice, breath-sensing garment, RL sound agent', fr: 'Voix, vêtement capteur de respiration, agent sonore RL', zh: '人声、呼吸传感服装、强化学习声音代理' } },
-        { k: 'm_device', v: { en: 'GummiSoma, co-developed with Yamaha', fr: 'GummiSoma, co-développé avec Yamaha', zh: 'GummiSoma，与 Yamaha 合作开发' },
-          links: [
-            { label: { en: 'Paper · UbiComp/ISWC 2026', fr: 'Article · UbiComp/ISWC 2026', zh: '论文 · UbiComp/ISWC 2026' },
-              href: 'https://www.idmil.org/publication/gummisoma-co-designing-a-carbon-nanotube-strain-sensing-garment-for-respiratory-tracking-in-vocal-performance/' },
-            { label: { en: 'Video', fr: 'Vidéo', zh: '视频' }, href: 'https://youtu.be/KVxbNY8ZzHs' }
-          ] }
-      ]
-    },
-    {
       no: '01',
       year: '2020',
       title: { en: 'Dao', fr: 'Dao', zh: '道' },
@@ -514,6 +489,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
           '<div class="work-no mono"><span>' + esc(w.type[lang]) + '</span>' + (w.year ? '<span>·</span><span>' + esc(w.year) + '</span>' : '') + '</div>' +
           '<h3>' + esc(w.title[lang === 'zh' ? 'en' : lang]) + '<span class="seal">' + esc(w.seal) + '</span></h3>' +
           '<p class="work-sub">' + esc(w.subtitle[lang]) + '</p>' +
+          (w.note ? '<p class="work-note mono">' + esc(w.note[lang]) + '</p>' : '') +
           '<p class="work-desc">' + esc(w.desc[lang]) + '</p>' +
           '<dl class="work-meta">' + meta + '</dl>' +
         '</div></article>';
