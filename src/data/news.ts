@@ -8,6 +8,12 @@ export interface News {
 export const newsData: News[] = [
   // If you don't want to show news, just make the array empty.
   {
+    date: "November 2026",
+    title:
+      "Our CHI 2027 meet-up, \"Inhale, Exhale, Interact: A Meetup for the Breathing & Body-Centred HCI Community\", has been accepted!",
+    link: "https://breathing-and-body-chi2027.vercel.app/",
+  },
+  {
     date: "October 2026",
     title: "I am a visiting researcher at Keio University Graduate School of Media Design (KMD) hosted by Prof. Akira Kato and Dr. Kanyu Chen.",
     link: "https://www.kmd.keio.ac.jp/",
