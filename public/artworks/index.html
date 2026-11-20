@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>XŪGU Studio 虚谷</title>
-<meta name="description" content="XŪGU STUDIO 虚谷 — art and technology studio. Audio-visual interactive works with wearables and the body, drawing on Daoist thought, folk song, ritual and Chinese medicine.">
+<title>Ziyue Piao · Artworks</title>
+<meta name="description" content="Ziyue Piao, artwork portfolio. Audio-visual and interactive works with wearables and the body, drawing on Daoist thought, folk song, ritual and Chinese medicine.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400&family=Noto+Serif+SC:wght@200;300;400;500&family=Geist:wght@300;400;500&family=Geist+Mono:wght@400&display=swap">
@@ -66,9 +66,6 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
   position: fixed; inset: 0; pointer-events: none; z-index: 70; opacity: 0.045; mix-blend-mode: multiply;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
 }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .logo--l { display: none; } :root:not([data-theme="light"]) .logo--d { display: block; } }
-:root[data-theme="dark"] .logo--l { display: none; }
-:root[data-theme="dark"] .logo--d { display: block; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .grain { mix-blend-mode: screen; filter: invert(1); opacity: 0.03; } }
 :root[data-theme="dark"] .grain { mix-blend-mode: screen; filter: invert(1); opacity: 0.03; }
 
@@ -95,7 +92,7 @@ header.top {
 }
 .top .wrap { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
 .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-.brand .logo { width: auto; height: 40px; }
+.brand b { font-family: var(--f-logo); font-weight: 400; font-size: 22px; letter-spacing: 0.08em; }
 .top nav { display: none; gap: 28px; }
 .top nav a { text-decoration: none; transition: color .2s; }
 .top nav a:hover { color: var(--ink); }
@@ -115,10 +112,8 @@ header.top {
 .hero-meta { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 .hero-grid { display: grid; gap: 36px; align-items: center; }
 @media (min-width: 960px) { .hero-grid { grid-template-columns: 5fr 7fr; gap: 56px; } .hero .wrap { padding-block: 88px 48px; } }
-/* Logo: light-ink version on paper, paper-ink version at night */
-.logo { display: block; width: 100%; height: auto; max-width: 100%; }
-.logo--d { display: none; }
-.mark { margin: 0; width: min(100%, 360px); line-height: 0; }
+.mark { margin: 0; font-family: var(--f-logo); font-weight: 300; font-size: clamp(52px, 8vw, 88px); line-height: 0.95; letter-spacing: -0.01em; }
+.mark small { display: block; font-family: var(--f-mono); font-size: 11px; font-weight: 400; letter-spacing: 0.5em; text-transform: uppercase; color: var(--ink-2); margin-top: 18px; padding-left: 4px; line-height: 1; }
 .lede { max-width: 30em; display: grid; gap: 14px; }
 .lede .kicker { font-family: var(--f-display); font-size: 22px; font-weight: 400; line-height: 1.25; color: var(--ink); margin: 0; text-wrap: balance; }
 .lede p { margin: 0; color: var(--ink-2); font-size: 14.5px; }
@@ -168,6 +163,7 @@ section.band > .wrap { padding-block: 80px; }
 .work-text h3 { margin: 0; font-family: var(--f-display); font-weight: 300; font-size: clamp(38px, 5vw, 54px); line-height: 1; display: flex; align-items: center; gap: 14px; flex-wrap: wrap; }
 .work-text h3 .seal { font-size: 26px; padding: 6px 7px; border-width: 2px; }
 .work-sub { font-family: var(--f-display); font-style: italic; font-size: 18px; color: var(--ink-2); margin: -6px 0 0; }
+.work-note { margin: -4px 0 0; letter-spacing: 0.1em; color: var(--seal); }
 .work-desc { margin: 0; color: var(--ink-2); font-size: 14.5px; max-width: 34em; }
 .work-meta { margin: 0; display: grid; grid-template-columns: max-content 1fr; border-top: 1px solid var(--rule); }
 .work-meta dt, .work-meta dd { margin: 0; padding: 10px 0; border-bottom: 1px solid var(--rule); }
@@ -194,7 +190,7 @@ section.band > .wrap { padding-block: 80px; }
 .thread .name { font-family: var(--f-display); font-size: 18px; font-weight: 400; line-height: 1.1; }
 .thread p { margin: 0; font-size: 13.5px; color: var(--ink-2); }
 
-/* Studio */
+/* About */
 .studio { display: grid; gap: 40px; }
 @media (min-width: 960px) { .studio { grid-template-columns: 7fr 4fr; gap: 72px; } }
 .studio-text { display: grid; gap: 20px; max-width: 36em; min-width: 0; }
@@ -236,14 +232,13 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 
 <header class="top">
   <div class="wrap">
-    <a class="brand" href="#top" aria-label="XŪGU Studio, top">
-      <img class="logo logo--l" src="images/xugu-logo-light.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
-      <img class="logo logo--d" src="images/xugu-logo-dark.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
+    <a class="brand" href="#top" aria-label="Ziyue Piao, top">
+      <b>Ziyue Piao</b>
     </a>
     <nav class="mono" aria-label="Sections">
       <a href="#works" data-i18n="nav_works">Works</a>
       <a href="#practice" data-i18n="nav_practice">Inspiration</a>
-      <a href="#studio" data-i18n="nav_studio">Studio</a>
+      <a href="#about" data-i18n="nav_about">About</a>
     </nav>
     <div class="controls">
       <div class="langs" role="group" aria-label="Language">
@@ -263,15 +258,12 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
     <div class="wrap">
       <div class="hero-grid">
         <div style="display:grid;gap:32px;min-width:0">
-          <h1 class="mark rise d1">
-            <img class="logo logo--l" src="images/xugu-logo-light.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
-            <img class="logo logo--d" src="images/xugu-logo-dark.svg" alt="XŪGU Studio 虚谷" width="1552" height="502">
-          </h1>
+          <h1 class="mark rise d1">Ziyue Piao<small data-i18n="hero_sub">Artwork Portfolio</small></h1>
           <div class="lede rise d2">
             <p class="kicker" data-i18n="kicker">Art and technology for sound, image and the body.</p>
             <div class="cta">
               <a class="btn btn--solid" href="#works" data-i18n="cta_works">See the works ↓</a>
-              <a class="btn btn--line" href="#studio" data-i18n="cta_contact">Contact</a>
+              <a class="btn btn--line" href="#about" data-i18n="cta_contact">Contact</a>
             </div>
           </div>
         </div>
@@ -307,18 +299,19 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
     </div>
   </section>
 
-  <section class="band" id="studio">
+  <section class="band" id="about">
     <div class="wrap">
       <div class="sec-head">
-        <h2><span style="font-family:var(--f-logo);font-weight:300">XŪGU</span><span class="seal" style="font-size:22px;padding:6px 7px;border-width:2px;align-self:center">虚谷</span></h2>
+        <h2><span data-i18n="about_title">About</span></h2>
       </div>
       <div class="studio">
         <div class="studio-text">
-          <p class="big" data-i18n="studio_p1">虚谷 means empty valley: low and open, so it receives and resonates. Make room first, then let sound, image and body fill it.</p>
+          <p class="big" data-i18n="about_p1">I make audio-visual and interactive works with wearables and the moving body, drawing on Daoist thought, folk song, ritual and Chinese medicine.</p>
+          <p class="big" data-i18n="about_p2">This is my research-creation practice alongside my doctoral work at McGill University. It is non-commercial: the works are made for research, exhibition and performance.</p>
         </div>
         <div class="facts">
           <div class="fact">
-            <span class="mono" data-i18n="f_founder">Founder</span>
+            <span class="mono" data-i18n="f_artist">Artist</span>
             <span class="val">Ziyue Piao</span>
             <span class="links mono" style="letter-spacing:.1em">
               <a href="https://piaoziyue.github.io/" target="_blank" rel="noopener noreferrer">Personal Website ↗</a>
@@ -345,10 +338,9 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
           <span class="mono" data-i18n="quote_src">Dao De Jing · 41</span>
         </span>
       </div>
-      <span class="seal seal--solid" style="font-size:18px;padding:8px 9px">虚谷</span>
     </div>
     <div class="foot-line mono">
-      <span>© 2026 XŪGU STUDIO</span>
+      <span data-i18n="foot_copy">© 2026 Ziyue Piao · Non-commercial</span>
     </div>
   </div>
 </footer>
@@ -359,32 +351,6 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 
   /* ---------------- Content: add new works here ---------------- */
   var WORKS = [
-    {
-      no: '02',
-      year: '2026',
-      title: { en: 'Conspire I', fr: 'Conspire I', zh: 'Conspire I' },
-      seal: '身',
-      subtitle: { en: 'Embodied Vocal Improvisation', fr: 'Improvisation vocale incarnée', zh: '具身人声即兴' },
-      type: { en: 'Demo', fr: 'Démo', zh: '演示' },
-      image: 'images/conspire-i.jpg',
-      alt: 'A performer wearing headphones and a breath-sensing chest band, beside the SomaSoni interface where an RL agent moves sliders for grain, space and colour.',
-      video: 'https://youtu.be/FO3_tZ7bZKY',
-      youtube: 'FO3_tZ7bZKY',
-      desc: {
-        en: 'Conspire I (2026) is an embodied vocal improvisation demo where extended breath techniques meet a Reinforcement Learning sound agent. Through continuous breath-voice exploration, performer and AI co-negotiate emergent timbres in real time.',
-        fr: 'Conspire I (2026) est une démo d’improvisation vocale incarnée où des techniques de souffle étendues rencontrent un agent sonore à apprentissage par renforcement. Dans une exploration continue du souffle et de la voix, l’interprète et l’IA négocient ensemble des timbres émergents, en temps réel.',
-        zh: 'Conspire I（2026）是一段具身人声即兴演示：扩展呼吸技巧与强化学习声音代理相遇。在持续的呼吸与人声探索中，表演者与 AI 实时共同协商、生成新的音色。'
-      },
-      meta: [
-        { k: 'm_medium', v: { en: 'Voice, breath-sensing garment, RL sound agent', fr: 'Voix, vêtement capteur de respiration, agent sonore RL', zh: '人声、呼吸传感服装、强化学习声音代理' } },
-        { k: 'm_device', v: { en: 'GummiSoma, co-developed with Yamaha', fr: 'GummiSoma, co-développé avec Yamaha', zh: 'GummiSoma，与 Yamaha 合作开发' },
-          links: [
-            { label: { en: 'Paper · UbiComp/ISWC 2026', fr: 'Article · UbiComp/ISWC 2026', zh: '论文 · UbiComp/ISWC 2026' },
-              href: 'https://www.idmil.org/publication/gummisoma-co-designing-a-carbon-nanotube-strain-sensing-garment-for-respiratory-tracking-in-vocal-performance/' },
-            { label: { en: 'Video', fr: 'Vidéo', zh: '视频' }, href: 'https://youtu.be/KVxbNY8ZzHs' }
-          ] }
-      ]
-    },
     {
       no: '01',
       year: '2020',
@@ -423,7 +389,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 
   var I18N = {
     en: {
-      nav_works: 'Works', nav_practice: 'Inspiration', nav_studio: 'Studio',
+      nav_works: 'Works', nav_practice: 'Inspiration', nav_about: 'About', hero_sub: 'Artwork Portfolio',
       meta_left: 'Art & Technology · Audio-Visual · Wearables',
       kicker: 'Art and technology for sound, image and the body.',
       lede: 'Audio-visual interactive works with wearables, drawing on Daoist thought, folk song, ritual and Chinese medicine.',
@@ -433,17 +399,16 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
       works_title: 'Works', works_sub: 'Performances, installations and instruments. The archive grows as new works are made.',
       archive_note: 'More works in preparation', works_soon: 'More works coming in 2026.', watch: 'Watch on YouTube', play: 'Play',
       m_year: 'Year', m_ensemble: 'Ensemble', m_medium: 'Medium', m_device: 'Device', m_video: 'Video',
-      practice_title: 'Inspiration', practice_sub: 'Five threads run through the studio’s work.',
-      studio_title: 'Studio', studio_sub: 'Xū gǔ · empty valley',
-      studio_p1: '虚谷 means empty valley: low and open, so it receives and resonates. Make room first, then let sound, image and body fill it.',
-      studio_p2: 'XŪGU builds audio-visual interactive artworks with wearable sensors, live electronics and the performing body, and treats Chinese traditional thought as a working source for form and method.',
+      practice_title: 'Inspiration', practice_sub: 'Five threads run through the work.',
+      about_title: 'About', about_p1: 'I make audio-visual and interactive works with wearables and the moving body, drawing on Daoist thought, folk song, ritual and Chinese medicine.',
+      about_p2: 'This is my research-creation practice alongside my doctoral work at McGill University. It is non-commercial: the works are made for research, exhibition and performance.', f_artist: 'Artist', foot_copy: '© 2026 Ziyue Piao · Non-commercial',
       f_founder: 'Founder', f_location: 'Location', f_location_val: 'Montréal, Canada', f_contact: 'Contact',
       f_contact_note: 'Commissions · Collaborations · Performances', copy: 'Copy', copied: 'Copied',
       quote: 'Great sound is near silence. Great image is beyond form.', quote_src: 'Dao De Jing · 41',
       foot_right: 'Montréal · Art & Technology'
     },
     fr: {
-      nav_works: 'Œuvres', nav_practice: 'Inspirations', nav_studio: 'Studio',
+      nav_works: 'Œuvres', nav_practice: 'Inspirations', nav_about: 'À propos', hero_sub: 'Portfolio d’œuvres',
       meta_left: 'Art & technologie · Audiovisuel · Dispositifs portés',
       kicker: 'Art et technologie pour le son, l’image et le corps.',
       lede: 'Œuvres audiovisuelles interactives avec capteurs portés, nourries de pensée taoïste, de chant populaire, de rituel et de médecine chinoise.',
@@ -453,17 +418,16 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
       works_title: 'Œuvres', works_sub: 'Performances, installations et instruments. L’archive s’enrichit au fil des créations.',
       archive_note: 'D’autres œuvres en préparation', works_soon: 'D’autres œuvres à venir en 2026.', watch: 'Voir sur YouTube', play: 'Lire',
       m_year: 'Année', m_ensemble: 'Ensemble', m_medium: 'Médium', m_device: 'Dispositif', m_video: 'Vidéo',
-      practice_title: 'Inspirations', practice_sub: 'Cinq fils traversent le travail du studio.',
-      studio_title: 'Studio', studio_sub: 'Xū gǔ · vallée vide',
-      studio_p1: '虚谷 signifie « vallée vide » : basse et ouverte, elle reçoit et résonne. D’abord faire de la place, puis laisser le son, l’image et le corps l’habiter.',
-      studio_p2: 'XŪGU crée des œuvres audiovisuelles interactives avec des capteurs portés, l’électronique en direct et le corps du performeur, et puise dans la pensée traditionnelle chinoise ses formes et ses méthodes de travail.',
+      practice_title: 'Inspirations', practice_sub: 'Cinq fils traversent le travail.',
+      about_title: 'À propos', about_p1: 'Je crée des œuvres audiovisuelles et interactives avec des capteurs portés et le corps en mouvement, nourries de pensée taoïste, de chant populaire, de rituel et de médecine chinoise.',
+      about_p2: 'C’est ma pratique de recherche-création, menée parallèlement à mon doctorat à l’Université McGill. Elle est non commerciale : les œuvres sont créées pour la recherche, l’exposition et la performance.', f_artist: 'Artiste', foot_copy: '© 2026 Ziyue Piao · Non commercial',
       f_founder: 'Fondatrice', f_location: 'Lieu', f_location_val: 'Montréal, Canada', f_contact: 'Contact',
       f_contact_note: 'Commandes · Collaborations · Performances', copy: 'Copier', copied: 'Copié',
       quote: 'Le grand son est à peine audible. La grande image n’a pas de forme.', quote_src: 'Dao De Jing · 41',
       foot_right: 'Montréal · Art & technologie'
     },
     zh: {
-      nav_works: '作品', nav_practice: '灵感', nav_studio: '工作室',
+      nav_works: '作品', nav_practice: '灵感', nav_about: '关于', hero_sub: '作品集',
       meta_left: '艺术与科技 · 视听 · 可穿戴',
       kicker: '关于声音、影像与身体的艺术与科技。',
       lede: '以可穿戴设备创作视听互动作品，取法道家、民歌、宗教仪式与中医。',
@@ -473,10 +437,9 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
       works_title: '作品', works_sub: '演出、装置与乐器。作品档案随创作持续更新。',
       archive_note: '更多作品筹备中', works_soon: '更多作品将于 2026 年推出。', watch: '在 YouTube 观看', play: '播放',
       m_year: '年份', m_ensemble: '编制', m_medium: '媒介', m_device: '设备', m_video: '影像',
-      practice_title: '灵感', practice_sub: '工作室的创作贯穿五条线索。',
-      studio_title: '工作室', studio_sub: 'Xū gǔ · 虚怀若谷',
-      studio_p1: '虚谷，取「虚怀若谷」之意：低而空，故能容、能应。先留出空间，再让声音、影像与身体充盈其中。',
-      studio_p2: 'XŪGU 以可穿戴传感器、现场电子与表演者的身体创作视听互动作品，并把中国传统思想作为形式与方法的来源。',
+      practice_title: '灵感', practice_sub: '作品贯穿五条线索。',
+      about_title: '关于', about_p1: '我以可穿戴设备与身体为媒介创作视听互动作品，取法道家思想、民歌、宗教仪式与中医。',
+      about_p2: '这是我在麦吉尔大学攻读博士期间进行的研究创作实践，属非商业性质：作品用于研究、展览与演出。', f_artist: '艺术家', foot_copy: '© 2026 Ziyue Piao · 非商业',
       f_founder: '创办人', f_location: '所在地', f_location_val: '加拿大 · 蒙特利尔', f_contact: '联系',
       f_contact_note: '委约 · 合作 · 演出', copy: '复制', copied: '已复制',
       quote: '大音希声，大象无形。', quote_src: '《道德经》第四十一章',
@@ -486,7 +449,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 
   function store(k, v) { try { if (v === undefined) return localStorage.getItem(k); if (v === null) localStorage.removeItem(k); else localStorage.setItem(k, v); } catch (e) { return null; } }
 
-  var lang = store('xugu_lang') || 'en';
+  var lang = store('zp_lang') || 'en';
   if (!I18N[lang]) lang = 'en';
   var soundOn = false;
 
@@ -514,6 +477,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
           '<div class="work-no mono"><span>' + esc(w.type[lang]) + '</span>' + (w.year ? '<span>·</span><span>' + esc(w.year) + '</span>' : '') + '</div>' +
           '<h3>' + esc(w.title[lang === 'zh' ? 'en' : lang]) + '<span class="seal">' + esc(w.seal) + '</span></h3>' +
           '<p class="work-sub">' + esc(w.subtitle[lang]) + '</p>' +
+          (w.note ? '<p class="work-note mono">' + esc(w.note[lang]) + '</p>' : '') +
           '<p class="work-desc">' + esc(w.desc[lang]) + '</p>' +
           '<dl class="work-meta">' + meta + '</dl>' +
         '</div></article>';
@@ -545,7 +509,7 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 
   function setLang(l) {
     lang = I18N[l] ? l : 'en';
-    store('xugu_lang', lang);
+    store('zp_lang', lang);
     document.documentElement.lang = lang === 'zh' ? 'zh-CN' : lang;
     var t = I18N[lang];
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
@@ -560,12 +524,12 @@ html[lang="zh-CN"] .quote .t span:first-child { font-family: var(--f-zh); font-s
 
   /* ---------------- Theme ---------------- */
   var mq = window.matchMedia('(prefers-color-scheme: dark)');
-  var savedTheme = store('xugu_theme');
+  var savedTheme = store('zp_theme');
   if (savedTheme === 'dark' || savedTheme === 'light') document.documentElement.setAttribute('data-theme', savedTheme);
   function isDark() { var a = document.documentElement.getAttribute('data-theme'); return a ? a === 'dark' : mq.matches; }
   document.getElementById('theme-btn').addEventListener('click', function () {
     var next = isDark() ? 'light' : 'dark';
-    document.documentElement.setAttribute('data-theme', next); store('xugu_theme', next); readColors();
+    document.documentElement.setAttribute('data-theme', next); store('zp_theme', next); readColors();
   });
   if (mq.addEventListener) mq.addEventListener('change', function () { readColors(); });
 
