@@ -28,13 +28,12 @@ export const portfolioData: Portfolio[] = [
   //   // codeUrl: "https://github.com/username/project",
   // },
   {
-    // Studio site lives in public/xugu/ and is served at piaoziyue.github.io/xugu/
-    title: "XŪGU Studio",
+    // Artwork portfolio lives in public/artworks/ and is served at piaoziyue.github.io/artworks/
+    title: "Artwork Portfolio",
     description: "",
-    projectUrl: "/xugu/",
-    // Contrast with the page: dark card in light mode, light card in dark mode
-    imageUrl: "/assets/img/portfolio/xugu/xugu-cover-dark.svg",
-    imageUrlDark: "/assets/img/portfolio/xugu/xugu-cover-light.svg",
+    projectUrl: "/artworks/",
+    imageUrl:
+      "/assets/img/portfolio/performance/per_dao.png",
   },
   {
     title: "Photography 📷 & Design 🧑‍🎨",
