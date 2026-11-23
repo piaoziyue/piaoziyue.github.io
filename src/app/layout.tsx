@@ -60,8 +60,22 @@ export default function RootLayout({
             `,
           }}
         />
+        {/* Visitor count. Counted on window load so a 404 page can be recorded as "404: /path". */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.addEventListener('load', function () {
+                var gc = window.goatcounter;
+                if (!gc || !gc.count) return;
+                var notFound = document.getElementById('not-found-marker');
+                gc.count(notFound ? { path: '404: ' + location.pathname, title: 'Page not found' } : {});
+              });
+            `,
+          }}
+        />
         <script
           data-goatcounter="https://piaoziyue.goatcounter.com/count"
+          data-goatcounter-settings='{"no_onload": true}'
           async
           src="//gc.zgo.at/count.js"
         />
