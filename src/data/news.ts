@@ -10,6 +10,12 @@ export const newsData: News[] = [
   {
     date: "November 2026",
     title:
+      "Honored to be selected as an EECS Rising Star! See you in Seattle at the University of Washington!",
+    link: "https://risingstars-eecs.mit.edu/",
+  },
+  {
+    date: "November 2026",
+    title:
       "Our CHI 2027 meet-up, \"Inhale, Exhale, Interact: A Meetup for the Breathing & Body-Centred HCI Community\", has been accepted!",
     link: "https://breathing-and-body-chi2027.vercel.app/",
   },
